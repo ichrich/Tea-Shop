@@ -1,0 +1,113 @@
+html::-webkit-scrollbar {
+  display: none;
+}
+
+.TonicsHero_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.TonicsHero_breadcrumbs {
+  padding-top: 92px;
+  padding-bottom: 12px;
+  z-index: 5;
+  flex-shrink: 0;
+}
+
+.TonicsHero_title_wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+  z-index: 3;
+}
+
+.TonicsHero_title {
+  margin: 0 0 10vw;
+  font-family: var(--font-davinci);
+  font-size: clamp(68px, 9vw, 176px);
+  line-height: 0.84;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  color: var(--color-paper);
+}
+
+.TonicsHero_desc_center {
+  position: absolute;
+  left: 50%;
+  top: 67%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  width: min(62vw, 980px);
+  padding: 0 1.2vw;
+  pointer-events: none;
+  text-align: center;
+}
+
+.TonicsHero_description {
+  margin: 0;
+  font-size: clamp(16px, 1.2vw, 22px);
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.TonicsHero_desc_center_long {
+  margin-top: 14px;
+  color: rgba(255, 255, 255, 0.74);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .TonicsHero_breadcrumbs {
+    padding-top: 100px;
+  }
+
+  .TonicsHero_title {
+    font-size: clamp(70px, 9vw, 120px);
+    white-space: normal;
+  }
+
+  .TonicsHero_desc_center {
+    width: 82vw;
+  }
+}
+
+@media (max-width: 767px) {
+  .TonicsHero_wrapper {
+    height: 62dvh;
+  }
+
+  .TonicsHero_breadcrumbs {
+    padding-top: 72px;
+  }
+
+  .TonicsHero_title_wrap {
+    padding-top: 30px;
+  }
+
+  .TonicsHero_title {
+    margin-bottom: 18vw;
+    font-size: clamp(48px, 12vw, 80px);
+    white-space: normal;
+    text-align: center;
+  }
+
+  .TonicsHero_desc_center {
+    width: 92vw;
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: none;
+    margin: auto;
+    margin-bottom: 15vw;
+  }
+
+  .TonicsHero_description {
+    font-size: 15px;
+  }
+}

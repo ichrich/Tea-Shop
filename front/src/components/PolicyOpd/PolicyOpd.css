@@ -1,0 +1,174 @@
+.PolicyOpd {
+  padding: clamp(96px, 8vw, 132px) 0 clamp(72px, 6vw, 104px);
+  background: var(--color-putty);
+  color: var(--color-paper);
+}
+
+.PolicyOpd_hero {
+  padding: clamp(28px, 3vw, 44px) 0 clamp(32px, 4vw, 56px);
+}
+
+.PolicyOpd_heroInner {
+  display: grid;
+  gap: 18px;
+}
+
+.PolicyOpd_eyebrow {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(247, 243, 235, 0.52);
+}
+
+.PolicyOpd_heroTitle {
+  margin: 0;
+  max-width: 12ch;
+  font-family: var(--font-davinci);
+  font-size: clamp(3rem, 5vw, 6.4rem);
+  line-height: 0.92;
+  font-weight: 500;
+  color: var(--color-paper);
+}
+
+.PolicyOpd_heroLead {
+  margin: 0;
+  max-width: 46rem;
+  font-size: clamp(17px, 1.15vw, 22px);
+  line-height: 1.6;
+  color: rgba(247, 243, 235, 0.78);
+}
+
+.PolicyOpd_layout {
+  padding: 0 0 8px;
+}
+
+.PolicyOpd_layoutInner {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr);
+  gap: clamp(24px, 2vw, 36px);
+  align-items: start;
+}
+
+.PolicyOpd_nav {
+  position: sticky;
+  top: 112px;
+  display: grid;
+  gap: 10px;
+}
+
+.PolicyOpd_navItem {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(247, 243, 235, 0.1);
+  color: rgba(247, 243, 235, 0.72);
+  text-decoration: none;
+}
+
+.PolicyOpd_navItem:hover {
+  color: var(--color-paper);
+}
+
+.PolicyOpd_navIndex,
+.PolicyOpd_cardIndex {
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(184, 138, 74, 0.88);
+}
+
+.PolicyOpd_navLabel {
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.PolicyOpd_content {
+  display: grid;
+  gap: 18px;
+}
+
+.PolicyOpd_card {
+  scroll-margin-top: 112px;
+  display: grid;
+  gap: 18px;
+  padding: clamp(22px, 2vw, 30px);
+  border: 1px solid rgba(247, 243, 235, 0.12);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(17, 21, 18, 0.98), rgba(10, 13, 11, 0.96));
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+}
+
+.PolicyOpd_cardHead {
+  display: grid;
+  gap: 12px;
+}
+
+.PolicyOpd_cardTitle {
+  margin: 0;
+  font-family: var(--font-davinci);
+  font-size: clamp(2rem, 2.5vw, 3.3rem);
+  line-height: 0.96;
+  font-weight: 500;
+  color: var(--color-paper);
+}
+
+.PolicyOpd_cardBody {
+  display: grid;
+  gap: 14px;
+}
+
+.PolicyOpd_text {
+  margin: 0;
+  font-size: clamp(16px, 1vw, 19px);
+  line-height: 1.65;
+  color: rgba(247, 243, 235, 0.82);
+}
+
+@media (max-width: 1024px) {
+  .PolicyOpd {
+    padding-top: 96px;
+  }
+
+  .PolicyOpd_layoutInner {
+    grid-template-columns: 1fr;
+  }
+
+  .PolicyOpd_nav {
+    position: static;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 18px;
+  }
+
+  .PolicyOpd_navItem {
+    padding: 0 0 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .PolicyOpd {
+    padding-top: 84px;
+    padding-bottom: 56px;
+  }
+
+  .PolicyOpd_hero {
+    padding-top: 18px;
+  }
+
+  .PolicyOpd_heroTitle {
+    max-width: 100%;
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .PolicyOpd_heroLead,
+  .PolicyOpd_text {
+    font-size: 16px;
+  }
+
+  .PolicyOpd_nav {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,497 @@
+
+.invitation {
+    width: 100%;
+    background-color: var(--clr-bg);
+    padding: 12.21vw 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: filter 0.3s ease;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+
+.invitation.is-locked {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.invitation_container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.invitation_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.invitation_title {
+    font-family: 'Hikasami', sans-serif;
+    text-align: center;
+    font-size: 2.9vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 110%;
+    color: white;
+    margin-bottom: 2.08vw;
+
+}
+
+.invitation_trigger_button {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 0.52vw;
+    background: transparent;
+    border: none;
+    font-size: 1.3vw;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    padding: 0.8vw 0;
+    transition: opacity 0.3s;
+}
+
+.invitation_trigger_button:hover {
+    opacity: 0.7;
+}
+
+.invitation_trigger_button img {
+    width: 1.25vw;
+    height: 1.25vw;
+}
+
+
+.invitation_overlay {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 999;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+    }
+    to {
+        opacity: 1;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
+
+.invitation_modal {
+    scrollbar-width: none;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 49.48vw;
+    height: 100vh;
+    background: #272727;
+    z-index: 1000;
+    padding: 5.21vw;
+    overflow-y: auto;
+    transition: left 0.4s ease;
+    border-radius: 0;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.invitation_modal::-webkit-scrollbar {
+    display: none;
+}
+
+.invitation_modal.active {
+    left: 0;
+}
+
+.invitation_close {
+    position: absolute;
+    top: 1.56vw;
+    right: 1.56vw;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 2.08vw;
+    height: 2.08vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+
+.invitation_close:hover {
+    opacity: 0.7;
+}
+
+.invitation_close svg {
+    width: 100%;
+    height: 100%;
+}
+
+.invitation_modal_title {
+    font-size: 2.9vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    line-height: 110%;
+    color: #ffffff;
+    font-family: 'Hikasami', sans-serif;
+    margin: 0;
+    padding-bottom: 2.08vw;
+}
+
+.invitation_modal_socials {
+    display: flex;
+    align-items: center;
+    gap: 1.1vw;
+    margin-bottom: 1.56vw;
+    font-size: 2.1vw;
+    color: #ffffff;
+}
+
+.invitation_modal_icons {
+    margin-top: 0.5vw;
+    display: flex;
+    gap: 0.52vw;
+}
+
+.invitation_modal_icon {
+    display: block;
+    width: 1.35vw;
+    height: 1.35vw;
+    transition: opacity 0.3s;
+}
+
+.invitation_modal_icon:hover {
+    opacity: 0.7;
+}
+
+.invitation_modal_icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.invitation_modal_description {
+    width: 30vw;
+    font-size: 1.3vw;
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 2.08vw;
+}
+
+.invitation_modal_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.04vw;
+}
+
+.invitation_modal_input {
+    width: 100%;
+    height: 2.19vw;
+    padding: 1.3vw 1.04vw;
+    font-size: 1.3vw;
+    font-family: inherit;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 0.52vw;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.invitation_modal_input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.invitation_modal_input:focus {
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.invitation_modal_checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.52vw;
+    font-size: 0.83vw;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.invitation_modal_checkbox input[type="checkbox"] {
+    width: 0.94vw;
+    height: 0.94vw;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 0.1vw;
+}
+
+.invitation_modal_checkbox u {
+    text-decoration: underline;
+}
+
+.invitation_modal_submit {
+    width: 100%;
+    height: 2.7vw;
+    background: #CDFFFF;
+    color: #000;
+    font-size: 0.83vw;
+    font-weight: 400;
+    border: none;
+    border-radius: 0.52vw;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.invitation_modal_submit:hover {
+    background: #B0F0F0;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .invitation {
+        padding: 40.21vw 2.60vw;
+        min-height: 100vh;
+    }
+
+    .invitation.is-locked {
+        height: 100vh;
+    }
+
+    .invitation_content {
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .invitation_title {
+        font-size: 4.30vw;
+        margin-bottom: 2.60vw;
+        max-width: 80vw;
+    }
+
+    .invitation_trigger_button {
+        font-size: 2.6vw;
+        gap: 1.04vw;
+        padding: 1.30vw 0;
+    }
+
+    .invitation_trigger_button img {
+        width: 2.6vw;
+        height: 2.6vw;
+    }
+
+    .invitation_overlay {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    .invitation_modal {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        width: 70vw;
+        height: 100vh;
+        padding: 2.77vw;
+        left: -100%;
+        border-radius: 0;
+    }
+
+    .invitation_modal.active {
+        left: 0;
+    }
+
+    .invitation_close {
+        top: 2.60vw;
+        right: 2.60vw;
+        width: 5.21vw;
+        height: 5.21vw;
+    }
+
+    .invitation_modal_title {
+        font-size: 4.6vw;
+        margin-bottom: 2.60vw;
+    }
+
+    .invitation_modal_socials {
+        font-size: 3.60vw;
+        gap: 1.04vw;
+        margin-bottom: 2.60vw;
+    }
+
+    .invitation_modal_icons {
+        gap: 1.04vw;
+    }
+
+    .invitation_modal_icon {
+        width: 2.60vw;
+        height: 2.60vw;
+    }
+
+    .invitation_modal_description {
+        font-size: 2.1vw;
+        line-height: 110%;
+        margin-bottom: 2.60vw;
+        width: 75%;
+    }
+
+    .invitation_modal_form {
+        gap: 2.08vw;
+    }
+
+    .invitation_modal_input {
+        height: 5.47vw;
+        padding: 1.95vw 2.60vw;
+        font-size: 2.1vw;
+        border-radius: 1.30vw;
+    }
+
+    .invitation_modal_checkbox {
+        font-size: 2.1vw;
+        gap: 1.04vw;
+    }
+
+    .invitation_modal_checkbox input[type="checkbox"] {
+        width: 2.08vw;
+        height: 2.08vw;
+    }
+
+    .invitation_modal_submit {
+        height: 5.47vw;
+        font-size: 2.1vw;
+        border-radius: 1.30vw;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .invitation {
+        padding: 62.33vw 5.56vw;
+        min-height: 100vh;
+    }
+
+    .invitation.is-locked {
+        height: 100vh;
+    }
+
+    .invitation_content {
+        max-width: 100%;
+    }
+
+    .invitation_title {
+        font-size: 6.8vw;
+        margin-bottom: 5.56vw;
+        max-width: 100%;
+    }
+
+    .invitation_trigger_button {
+        font-size: 4vw;
+        gap: 2.78vw;
+        padding: 2.78vw 0;
+    }
+
+    .invitation_trigger_button img {
+        width: 4.56vw;
+        height: 3.25vw;
+    }
+
+    .invitation_overlay {
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
+    .invitation_modal {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        padding: 7.89vw;
+        border-radius: 0;
+        left: -100%;
+    }
+
+    .invitation_modal.active {
+        left: 0;
+    }
+
+    .invitation_close {
+        top: 2.78vw;
+        right: 2.78vw;
+        width: 11.11vw;
+        height: 11.11vw;
+    }
+
+    .invitation_modal_title {
+        font-size: 6.8vw;
+        margin-bottom: 4.17vw;
+    }
+
+    .invitation_modal_socials {
+        font-size: 5.5vw;
+        gap: 2.78vw;
+        margin-bottom: 4.17vw;
+    }
+
+    .invitation_modal_icons {
+        gap: 2.78vw;
+    }
+
+    .invitation_modal_icon {
+        width: 5.56vw;
+        height: 5.56vw;
+    }
+
+    .invitation_modal_description {
+        width: 80%;
+        font-size: 3.89vw;
+        line-height: 150%;
+        margin-bottom: 5.56vw;
+    }
+
+    .invitation_modal_form {
+        gap: 4.17vw;
+    }
+
+    .invitation_modal_input {
+        height: 13.33vw;
+        padding: 3.33vw 4.44vw;
+        font-size: 3.89vw;
+        border-radius: 2.78vw;
+    }
+
+    .invitation_modal_checkbox {
+        font-size: 3.89vw;
+        gap: 2.78vw;
+    }
+
+    .invitation_modal_checkbox input[type="checkbox"] {
+        width: 4.44vw;
+        height: 4.44vw;
+    }
+
+    .invitation_modal_submit {
+        height: 13.33vw;
+        font-size: 3.89vw;
+        border-radius: 2.78vw;
+    }
+}

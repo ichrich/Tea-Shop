@@ -1,0 +1,243 @@
+.LoginPage {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  padding: 32px;
+  background: #0b0d0f;
+  overflow: hidden;
+}
+
+.LoginPage_backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(184, 138, 74, 0.16), transparent 22%),
+    radial-gradient(circle at 82% 24%, rgba(247, 243, 235, 0.08), transparent 24%),
+    linear-gradient(180deg, rgba(12, 16, 19, 0.96), rgba(8, 11, 13, 0.98));
+}
+
+.LoginPage_shell {
+  position: relative;
+  z-index: 1;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.LoginPage_intro,
+.LoginPage_card {
+  border: 1px solid rgba(247, 243, 235, 0.12);
+  border-radius: 9px;
+  background: linear-gradient(180deg, rgba(16, 20, 24, 0.98), rgba(10, 14, 17, 0.96));
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.28);
+}
+
+.LoginPage_intro {
+  display: grid;
+  align-content: end;
+  gap: 18px;
+  padding: clamp(28px, 3vw, 40px);
+  min-height: 560px;
+}
+
+.LoginPage_eyebrow {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(247, 243, 235, 0.52);
+}
+
+.LoginPage_title {
+  margin: 0;
+  max-width: 10ch;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 5vw, 5.6rem);
+  line-height: 0.92;
+  font-weight: 500;
+  color: #f7f3eb;
+}
+
+.LoginPage_subtitle {
+  margin: 0;
+  max-width: 34rem;
+  color: rgba(247, 243, 235, 0.76);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.LoginPage_card {
+  display: grid;
+  align-content: start;
+  gap: 24px;
+  padding: 32px 28px;
+}
+
+.LoginPage_cardHeader {
+  display: grid;
+  gap: 10px;
+}
+
+.LoginPage_cardTitle {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 2.4vw, 2.8rem);
+  line-height: 0.96;
+  font-weight: 500;
+  color: #f7f3eb;
+}
+
+.LoginPage_cardText {
+  margin: 0;
+  color: rgba(247, 243, 235, 0.62);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.LoginPage_form {
+  display: grid;
+  gap: 16px;
+}
+
+.LoginPage_error {
+  padding: 12px 14px;
+  border: 1px solid rgba(184, 74, 74, 0.52);
+  border-radius: 9px;
+  background: rgba(184, 74, 74, 0.12);
+  color: #ffd9d9;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.LoginPage_group {
+  display: grid;
+  gap: 8px;
+}
+
+.LoginPage_label {
+  color: rgba(247, 243, 235, 0.72);
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.LoginPage_input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid rgba(247, 243, 235, 0.16);
+  border-radius: 9px;
+  background: rgba(247, 243, 235, 0.04);
+  color: #f7f3eb;
+  font-size: 15px;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.LoginPage_input::placeholder {
+  color: rgba(247, 243, 235, 0.38);
+}
+
+.LoginPage_input:focus {
+  outline: none;
+  border-color: rgba(184, 138, 74, 0.72);
+  background: rgba(247, 243, 235, 0.06);
+  box-shadow: 0 0 0 3px rgba(184, 138, 74, 0.12);
+}
+
+.LoginPage_input:disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
+}
+
+.LoginPage_passwordField {
+  position: relative;
+}
+
+.LoginPage_passwordField .LoginPage_input {
+  padding-right: 50px;
+}
+
+.LoginPage_passwordEye {
+  position: absolute;
+  top: 50%;
+  right: 7px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  background: transparent;
+  color: rgba(247, 243, 235, 0.5);
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.LoginPage_passwordEye:hover,
+.LoginPage_passwordEye:focus-visible,
+.LoginPage_passwordEye[aria-pressed='true'] {
+  background: rgba(247, 243, 235, 0.06);
+  color: #d0a770;
+  outline: none;
+}
+
+.LoginPage_passwordEye svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.LoginPage_button {
+  min-height: 48px;
+  margin-top: 6px;
+  border: 1px solid rgba(247, 243, 235, 0.88);
+  border-radius: 28.8px;
+  background: #f7f3eb;
+  color: #0b0d0f;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.LoginPage_button:hover:not(:disabled) {
+  background: rgba(247, 243, 235, 0.92);
+}
+
+.LoginPage_button:disabled {
+  opacity: 0.56;
+  cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+  .LoginPage_shell {
+    grid-template-columns: 1fr;
+  }
+
+  .LoginPage_intro {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .LoginPage {
+    padding: 16px;
+  }
+
+  .LoginPage_card,
+  .LoginPage_intro {
+    padding: 22px 18px;
+  }
+}

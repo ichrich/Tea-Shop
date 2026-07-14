@@ -1,0 +1,31 @@
+.TonicsPage {
+  background: var(--color-putty);
+}
+
+.First_block {
+  height: auto;
+}
+
+.TonicsPage_footer {
+  background: var(--color-putty);
+}
+
+.TonicsPlanetScene {
+  position: relative;
+  z-index: 0;
+}
+
+.TonicsPlanetScene :is(.TonicsHero_wrapper, .TeaStory_section) {
+  position: relative;
+  z-index: 1;
+}
+
+.TonicsPlanetScene .TeaStory_section {
+  background: #080b09;
+}
+
+@media (max-width: 1024px) {
+  .TonicsPlanetScene .TeaStory_section {
+    background: #080b09;
+  }
+}

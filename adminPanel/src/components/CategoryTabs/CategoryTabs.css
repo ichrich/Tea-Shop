@@ -1,0 +1,50 @@
+
+.CategoryTabs {
+    display: flex;
+    gap: 0.78vw; 
+    margin-bottom: 1.04vw; 
+    flex-wrap: wrap;
+}
+
+.CategoryTabs_tab {
+    display: flex;
+    align-items: center;
+    gap: 0.16vw; 
+    padding: 0.52vw 0; 
+    background: transparent;
+    border: none;
+    border-bottom: 0.16vw solid transparent;
+    font-size: 0.73vw; 
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.CategoryTabs_tab:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.CategoryTabs_tab_active {
+    color: var(--clr-white);
+    border-bottom-color: rgba(205, 255, 255, 1);
+}
+
+.CategoryTabs_badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.56vw; 
+    height: 0.94vw; 
+    padding: 0 0.31vw; 
+    background-color: rgba(64, 64, 64, 1);
+    border-radius: 0.52vw; 
+    font-size: 0.63vw; 
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.CategoryTabs_tab_active .CategoryTabs_badge {
+    background-color: rgba(205, 255, 255, 1);
+    color: rgba(0, 0, 0, 1);
+}

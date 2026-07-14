@@ -1,0 +1,90 @@
+.AdministrationPage {
+  display: grid;
+  gap: 18px;
+}
+
+.AdministrationPage_topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: end;
+}
+
+.AdministrationPage_kicker {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: rgba(245, 239, 228, 0.48);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.AdministrationPage_title {
+  color: #f5efe4;
+  font-size: clamp(30px, 3vw, 42px);
+  line-height: 0.96;
+  font-weight: 500;
+}
+
+.AdministrationPage_search {
+  width: min(360px, 100%);
+}
+
+.AdministrationPage_searchInput {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(12, 14, 17, 0.86);
+  color: #f5efe4;
+}
+
+.AdministrationPage_searchInput::placeholder {
+  color: rgba(245, 239, 228, 0.4);
+}
+
+.AdministrationPage_stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.AdministrationPage_stats article,
+.AdministrationPage_tableWrap {
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(12, 14, 17, 0.86);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.AdministrationPage_stats article {
+  display: grid;
+  gap: 8px;
+}
+
+.AdministrationPage_stats span {
+  color: rgba(245, 239, 228, 0.48);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.AdministrationPage_stats strong {
+  color: #f5efe4;
+  font-size: clamp(24px, 2vw, 34px);
+  line-height: 1;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .AdministrationPage_topline,
+  .AdministrationPage_stats {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .AdministrationPage_search {
+    width: 100%;
+  }
+}

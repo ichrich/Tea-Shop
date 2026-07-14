@@ -1,0 +1,231 @@
+.Header {
+  position: fixed;
+  top: 16px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.32s ease;
+}
+
+.Header--visible {
+  transform: translateY(0);
+}
+
+.Header--hidden {
+  transform: translateY(calc(-100% - 40px));
+}
+
+.Header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.Header_brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: var(--color-paper);
+}
+
+.Logo {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-davinci);
+  font-size: 18px;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.Header_brand_copy {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.Header_brand_title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.Header_brand_note {
+  max-width: 340px;
+  font-size: 12px;
+  color: rgba(244, 239, 230, 0.58);
+  line-height: 1.3;
+}
+
+.Header_actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Header_cart_button,
+.Header_menu_button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-pill);
+  background: rgba(19, 24, 29, 0.88);
+  color: var(--color-paper);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+}
+
+.Header_cart_button:hover,
+.Header_menu_button:hover {
+  background: rgba(23, 29, 35, 0.98);
+  transform: translateY(-1px);
+}
+
+.Header_cart_button img {
+  width: 18px;
+  height: 18px;
+}
+
+.Header_menu_shell {
+  position: relative;
+}
+
+.Header_menu_button {
+  gap: 4px;
+  flex-direction: column;
+}
+
+.Header_menu_button span {
+  width: 16px;
+  height: 1px;
+  background: var(--color-paper);
+  transition: transform 0.24s ease, opacity 0.24s ease;
+}
+
+.Header_menu_button.is-active span:first-child {
+  transform: translateY(2.5px) rotate(45deg);
+}
+
+.Header_menu_button.is-active span:last-child {
+  transform: translateY(-2.5px) rotate(-45deg);
+}
+
+.Header_menu_dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: min(420px, calc(100vw - 32px));
+  padding: 20px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: rgba(16, 20, 24, 0.96);
+  display: grid;
+  gap: 18px;
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.32);
+  animation: HeaderMenuFade 0.24s ease;
+}
+
+@keyframes HeaderMenuFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Header_menu_group {
+  display: grid;
+  gap: 8px;
+}
+
+.Header_menu_label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(244, 239, 230, 0.48);
+}
+
+.Header_menu_links {
+  display: grid;
+  gap: 6px;
+}
+
+.Header_menu_link {
+  font-family: var(--font-davinci);
+  font-size: 28px;
+  line-height: 0.95;
+  text-decoration: none;
+  color: var(--color-paper);
+}
+
+.Header_menu_link:hover {
+  color: var(--color-accent);
+}
+
+.Header_cart_back {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  padding: 9px 17px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-strong);
+  background: rgba(16, 20, 24, 0.96);
+  color: var(--color-paper);
+  z-index: 1002;
+}
+
+@media (max-width: 1024px) {
+  .Header_brand_note {
+    max-width: 220px;
+  }
+
+  .Header_menu_dropdown {
+    width: min(360px, calc(100vw - 40px));
+  }
+
+  .Header_menu_link {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .Header {
+    top: 12px;
+  }
+
+  .Header_container {
+    gap: 12px;
+  }
+
+  .Header_brand {
+    gap: 12px;
+  }
+
+  .Header_brand_copy {
+    max-width: 180px;
+  }
+
+  .Header_brand_note {
+    display: none;
+  }
+
+  .Header_menu_dropdown {
+    width: calc(100vw - 32px);
+  }
+}

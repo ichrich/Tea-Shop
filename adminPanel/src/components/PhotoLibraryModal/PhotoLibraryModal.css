@@ -1,0 +1,112 @@
+.PhotoLibraryModal_overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+}
+
+.PhotoLibraryModal_panel {
+    position: fixed;
+    top: 8vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1100px, 92vw);
+    max-height: 86vh;
+    overflow: auto;
+    background: rgba(25, 25, 25, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.8vw;
+    z-index: 1000;
+}
+
+.PhotoLibraryModal_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 1.2vw;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.PhotoLibraryModal_header h2 {
+    margin: 0;
+    font-size: 1.1vw;
+    font-weight: 600;
+}
+
+.PhotoLibraryModal_close {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    font-size: 1.1vw;
+}
+
+.PhotoLibraryModal_body {
+    padding: 1.2vw;
+}
+
+.PhotoLibraryModal_loading {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 2vw;
+}
+
+.PhotoLibraryModal_grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.8vw;
+}
+
+.PhotoLibraryModal_tile {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(60, 60, 60, 0.2);
+    border-radius: 0.5vw;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.PhotoLibraryModal_tile img {
+    width: 100%;
+    height: 6.5vw;
+    object-fit: cover;
+    display: block;
+}
+
+.PhotoLibraryModal_tile.is-selected {
+    outline: 2px solid rgba(205, 255, 255, 0.9);
+}
+
+.PhotoLibraryModal_footer {
+    display: flex;
+    gap: 0.8vw;
+    justify-content: flex-end;
+    padding: 1vw 1.2vw;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.PhotoLibraryModal_confirm,
+.PhotoLibraryModal_cancel {
+    border-radius: 0.5vw;
+    padding: 0.7vw 1vw;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.06);
+    font-weight: 600;
+}
+
+.PhotoLibraryModal_confirm:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 900px) {
+    .PhotoLibraryModal_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .PhotoLibraryModal_tile img {
+        height: 20vw;
+    }
+}
+

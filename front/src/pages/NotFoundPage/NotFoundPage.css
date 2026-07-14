@@ -1,0 +1,54 @@
+.NotFound {
+    min-height: calc(100vh - 200px);
+    background-color: var(--clr-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6vw 0;
+    width: 100%;
+}
+
+.NotFound_container {
+    text-align: center;
+    color: var(--clr-white);
+}
+
+.NotFound_title {
+    font-family: "Hikasami", sans-serif;
+    font-size: 3vw;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    margin-bottom: 2vw;
+}
+
+.NotFound_button {
+    padding: 0.9vw 2.5vw;
+    border-radius: 0.85vw;
+    border: none;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.9vw;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+    border: 1px solid var(--clr-white);
+    transition: all 0.3s ease;
+}
+
+.NotFound_button:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 767px) {
+    .NotFound_title {
+        font-size: 7vw;
+    }
+
+    .NotFound_button {
+        font-size: 3.5vw;
+        padding: 3vw 8vw;
+    }
+}
+

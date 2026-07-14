@@ -1,0 +1,59 @@
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 15rem;
+  min-height: 44px;
+  padding: 9px 17px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-ink);
+  font-family: var(--font-helvetica-now);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.24s ease, background-color 0.24s ease, color 0.24s ease, border-color 0.24s ease;
+}
+
+.Button--primary {
+  background-color: var(--color-paper);
+  color: var(--color-putty);
+  border-color: rgba(247, 243, 235, 0.9);
+}
+
+.Button--outline {
+  background-color: transparent;
+  color: var(--color-paper);
+  border-color: rgba(247, 243, 235, 0.28);
+}
+
+.Button--primary:hover {
+  background-color: rgba(247, 243, 235, 0.92);
+}
+
+.Button--outline:hover {
+  border-color: rgba(247, 243, 235, 0.52);
+  background-color: rgba(247, 243, 235, 0.06);
+}
+
+.Button:hover {
+  transform: translateY(-1px);
+}
+
+.Button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+  .Button {
+    min-width: 13rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .Button {
+    width: 100%;
+  }
+}

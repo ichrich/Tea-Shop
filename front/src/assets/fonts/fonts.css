@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Hikasami';
+    src: url('./Hikasami-SemiBold.woff2') format('woff2'),
+    url('./Hikasami-SemiBold.woff2') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hikasami';
+    src: url('./Hikasami-Regular.woff2') format('woff2'),
+    url('./Hikasami-Regular.woff2') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

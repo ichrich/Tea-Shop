@@ -1,0 +1,799 @@
+
+.ProductsTable {
+    width: 100%;
+    margin-top: 1.04vw; 
+}
+
+.ProductsTable_wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.ProductsTable_table {
+    width: 100%;
+    border-collapse: collapse;          
+    border-spacing: 0;                  
+}
+
+
+.ProductsTable_thead {
+    background-color: transparent;
+}
+
+.ProductsTable_th {
+    padding: 1.1vw 0.52vw; 
+    text-align: left;
+    font-size: 0.85vw; 
+    font-weight: 500;
+    color: white;
+    letter-spacing: 0.05em;
+    line-height: 110%;
+    border-bottom: 0.05vw solid rgba(140, 140, 140, 1);
+    padding-bottom: 1.1vw; 
+}
+
+.ProductsTable_th_checkbox {
+    width: 3%;
+}
+
+.ProductsTable_th_inner {
+    display: flex;
+    align-items: center;
+    gap: 0.52vw; 
+    cursor: pointer;
+    user-select: none;
+}
+
+.ProductsTable_th_inner svg {
+    width: 0.63vw; 
+    height: 0.63vw;
+}
+
+.ProductsTable_tbody {
+    background-color: transparent;
+}
+
+
+.ProductsTable_row {
+    background-color: transparent;
+    transition: background-color 0.2s ease;
+}
+
+
+
+.ProductsTable_td {
+    padding: 1.04vw 0.52vw; 
+    font-size: 0.85vw; 
+    font-weight: 400;
+    color: var(--clr-white);
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    vertical-align: middle;
+
+    border-bottom: 0.05vw solid rgba(255, 255, 255, 0.12); 
+}
+
+
+.ProductsTable_tbody tr:last-child .ProductsTable_td {
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.ProductsTable_td_checkbox {
+    width: 3%;
+}
+
+.ProductsTable_th_photo {
+    width: 4%;
+}
+
+.ProductsTable_td_photo {
+    width: 4%;
+    vertical-align: middle;
+}
+
+.ProductsTable_photo {
+    width: 2.6vw;
+    height: 2.6vw;
+    object-fit: cover;
+    border-radius: 0.26vw;
+    display: block;
+}
+
+.ProductsTable_photo_placeholder {
+    display: inline-block;
+    width: 2.6vw;
+    height: 2.6vw;
+    background: rgba(255,255,255,0.08);
+    border-radius: 0.26vw;
+    line-height: 2.6vw;
+    text-align: center;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.85vw;
+}
+
+.ProductsTable_td_secondary {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ProductsTable_checkbox {
+    width: 0.94vw; 
+    height: 0.94vw;
+    cursor: pointer;
+}
+
+
+
+.ProductsTable_name-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 0.52vw;
+    position: relative; 
+}
+
+.ProductsTable_name {
+    font-size: 0.85vw;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.ProductsTable_more-btn {
+    width: 1.25vw;
+    height: 1.25vw;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+}
+
+.ProductsTable_more-btn img {
+    width: 0.63vw;
+    height: 0.63vw;
+    object-fit: contain;
+}
+
+
+.ProductsTable_context {
+    position: absolute;
+    top: 1.7vw;      
+    right: 0;
+    background: #ffffff;
+    color: #111111;
+    border-radius: 0.36vw;
+    box-shadow: 0 0.42vw 1.25vw rgba(0, 0, 0, 0.4);
+    padding: 0.21vw 0;
+    display: flex;
+    flex-direction: column;
+    min-width: 7.5vw;
+    z-index: 10;
+}
+
+.ProductsTable_context button {
+    background: transparent;
+    border: none;
+    padding: 0.42vw 0.83vw;
+    text-align: left;
+    font-size: 0.73vw;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.ProductsTable_context button:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+
+.ProductsTable_toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.52vw; 
+    cursor: pointer;
+}
+
+.ProductsTable_toggle_input {
+    display: none;
+}
+
+.ProductsTable_toggle_slider {
+    width: 2.08vw; 
+    height: 1.04vw; 
+    background-color: rgba(64, 64, 64, 1);
+    border-radius: 1.04vw;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.ProductsTable_toggle_slider::before {
+    content: '';
+    position: absolute;
+    width: 0.83vw; 
+    height: 0.83vw;
+    background-color: black;
+    border-radius: 50%;
+    top: 0.10vw; 
+    left: 0.10vw;
+    transition: all 0.3s ease;
+}
+
+.ProductsTable_toggle_input:checked + .ProductsTable_toggle_slider {
+    background-color: rgba(205, 255, 255, 1);
+}
+
+.ProductsTable_toggle_input:checked + .ProductsTable_toggle_slider::before {
+    background-color: black;
+    transform: translateX(1.04vw); 
+}
+
+.ProductsTable_toggle_label {
+    font-size: 0.85vw; 
+    font-weight: 400;
+    color: var(--clr-white);
+}
+
+.ProductsTable_footer {
+    margin-top: 1.56vw; 
+    display: flex;
+    justify-content: flex-end;
+}
+.ProductsTable_name--clickable {
+    cursor: pointer;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+.ProductsTable_name--clickable:hover {
+    color: rgba(205, 255, 255, 1);
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .ProductsTable {
+        width: 100%;
+        margin-top: 2.75vw;
+    }
+
+    
+    .ProductsTable_wrapper {
+        width: 100%;
+        height: 82.42vw; 
+        overflow-x: auto;
+        overflow-y: auto;
+        border-radius: 1.37vw;
+        background: rgba(255, 255, 255, 0.05);
+        position: relative;
+
+        
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.05);
+    }
+
+    .ProductsTable_wrapper::-webkit-scrollbar {
+        height: 1.1vw;
+        width: 1.1vw;
+    }
+
+    .ProductsTable_wrapper::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .ProductsTable_wrapper::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 0.55vw;
+    }
+
+    .ProductsTable_wrapper::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    
+    .ProductsTable_table {
+        min-width: 137.36vw; 
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    
+    .ProductsTable_thead {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(30, 13, 13, 0.95);
+        backdrop-filter: blur(1.37vw);
+    }
+
+    .ProductsTable_th {
+        padding: 1.79vw 1.37vw;
+        font-size: 2.2vw; 
+        font-weight: 500;
+        color: white;
+        text-align: left;
+        white-space: nowrap;
+        border-bottom: 0.14vw solid rgba(140, 140, 140, 1);
+    }
+
+    .ProductsTable_th_checkbox {
+        width: 5.49vw; 
+        padding-left: 2.06vw;
+    }
+
+    .ProductsTable_th_inner {
+        display: flex;
+        align-items: center;
+        gap: 0.82vw;
+        cursor: pointer;
+    }
+
+    .ProductsTable_th_inner svg {
+        width: 2.06vw; 
+        height: 2.06vw;
+    }
+
+    
+    .ProductsTable_th:nth-child(1) { width: 5.49vw; }    
+    .ProductsTable_th:nth-child(2) { width: 27.47vw; }   
+    .ProductsTable_th:nth-child(3) { width: 16.48vw; }   
+    .ProductsTable_th:nth-child(4) { width: 19.23vw; }   
+    .ProductsTable_th:nth-child(5) { width: 13.74vw; }   
+    .ProductsTable_th:nth-child(6) { width: 16.48vw; }   
+    .ProductsTable_th:nth-child(7) { width: 13.74vw; }   
+    .ProductsTable_th:nth-child(8) { width: 24.73vw; }   
+
+    
+    .ProductsTable_tbody {
+        background: transparent;
+    }
+
+    .ProductsTable_row {
+        background: transparent;
+        transition: background-color 0.2s ease;
+        border-bottom: 0.14vw solid rgba(255, 255, 255, 0.05);
+    }
+
+    .ProductsTable_row:hover {
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    .ProductsTable_td {
+        padding: 1.79vw 1.37vw; 
+        font-size: 2.2vw; 
+        font-weight: 400;
+        color: var(--clr-white);
+        vertical-align: middle;
+        border-bottom: 0.14vw solid rgba(255, 255, 255, 0.12);
+    }
+
+    .ProductsTable_tbody tr:last-child .ProductsTable_td {
+        border-bottom-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .ProductsTable_td_checkbox {
+        width: 5.49vw;
+        padding-left: 2.06vw;
+    }
+
+    .ProductsTable_td_secondary {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    
+    .ProductsTable_checkbox {
+        width: 2.47vw; 
+        height: 2.47vw;
+        cursor: pointer;
+        border-radius: 0.55vw;
+    }
+
+    
+    .ProductsTable_name-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.1vw;
+        position: relative;
+    }
+
+    .ProductsTable_name {
+        font-size: 2.2vw; 
+        color: #ffffff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1;
+    }
+
+    .ProductsTable_name--clickable {
+        cursor: pointer;
+        transition: color 0.2s ease, text-decoration 0.2s ease;
+    }
+
+    .ProductsTable_name--clickable:hover {
+        color: rgba(205, 255, 255, 1);
+        text-decoration: underline;
+    }
+
+    
+    .ProductsTable_more-btn {
+        width: 3.3vw; 
+        height: 3.3vw;
+        border-radius: 50%;
+        border: none;
+        background: transparent;
+        padding: 0;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    .ProductsTable_more-btn img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    
+    .ProductsTable_context {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 24.73vw; 
+        background: rgba(40, 40, 40, 0.98);
+        border-radius: 1.1vw;
+        padding: 1.1vw;
+        z-index: 100;
+        box-shadow: 0 0.55vw 2.75vw rgba(0, 0, 0, 0.5);
+    }
+
+    .ProductsTable_context button {
+        width: 100%;
+        background: transparent;
+        border: none;
+        padding: 1.37vw 1.79vw;
+        text-align: left;
+        font-size: 1.92vw; 
+        color: #fff;
+        cursor: pointer;
+        white-space: nowrap;
+        border-radius: 0.69vw;
+    }
+
+    .ProductsTable_context button:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    
+    .ProductsTable_toggle {
+        display: flex;
+        align-items: center;
+        gap: 1.37vw;
+        cursor: pointer;
+    }
+
+    .ProductsTable_toggle_input {
+        display: none;
+    }
+
+    .ProductsTable_toggle_slider {
+        width: 5.49vw; 
+        height: 2.61vw; 
+        background-color: rgba(64, 64, 64, 1);
+        border-radius: 1.3vw;
+        position: relative;
+        transition: background-color 0.3s ease;
+    }
+
+    .ProductsTable_toggle_slider::before {
+        content: '';
+        position: absolute;
+        width: 2.06vw; 
+        height: 2.06vw;
+        background-color: black;
+        border-radius: 50%;
+        top: 0.27vw;
+        left: 0.27vw;
+        transition: all 0.3s ease;
+    }
+
+    .ProductsTable_toggle_input:checked + .ProductsTable_toggle_slider {
+        background-color: rgba(205, 255, 255, 1);
+    }
+
+    .ProductsTable_toggle_input:checked + .ProductsTable_toggle_slider::before {
+        background-color: black;
+        transform: translateX(2.88vw); 
+    }
+
+    .ProductsTable_toggle_label {
+        font-size: 2.2vw; 
+        font-weight: 400;
+        color: var(--clr-white);
+        white-space: nowrap;
+    }
+
+    
+    .ProductsTable_footer {
+        margin-top: 2.75vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 767px) {
+    .ProductsTable {
+        width: 100%;
+        margin-top: 6.25vw; 
+    }
+
+    
+    .ProductsTable_wrapper {
+        width: 100%;
+
+        overflow-x: auto;
+        overflow-y: auto;
+        border-radius: 3.125vw; 
+        background: rgba(30, 13, 13, 1);
+        position: relative;
+
+        
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.05);
+    }
+
+    .ProductsTable_wrapper::-webkit-scrollbar {
+        height: 1.875vw; 
+        width: 1.875vw;
+    }
+
+    .ProductsTable_wrapper::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .ProductsTable_wrapper::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 0.94vw; 
+    }
+
+    .ProductsTable_wrapper::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    
+    .ProductsTable_table {
+        min-width: 300vw; 
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    
+    .ProductsTable_thead {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(30, 13, 13, 0.98);
+        backdrop-filter: blur(3.125vw);
+    }
+
+    .ProductsTable_th {
+        padding: 3.125vw; 
+        font-size: 5vw; 
+        font-weight: 500;
+        color: white;
+        text-align: left;
+        white-space: nowrap;
+        border-bottom: 0.31vw solid rgba(140, 140, 140, 1);
+        letter-spacing: -0.03em;
+        line-height: 110%;
+        text-transform: uppercase;
+    }
+
+    .ProductsTable_th_checkbox {
+        width: 12.5vw; 
+        padding-left: 3.125vw;
+    }
+
+    .ProductsTable_th_inner {
+        display: flex;
+        align-items: center;
+        gap: 3.125vw; 
+        cursor: pointer;
+    }
+
+    .ProductsTable_th_inner svg {
+        width: 4.69vw; 
+        height: 4.69vw;
+    }
+
+    
+    .ProductsTable_th:nth-child(1) { width: 12.5vw; }      
+    .ProductsTable_th:nth-child(2) { min-width: 56.25vw; }  
+    .ProductsTable_th:nth-child(3) { min-width: 31.25vw; }  
+    .ProductsTable_th:nth-child(4) { min-width: 43.75vw; }  
+    .ProductsTable_th:nth-child(5) { min-width: 43.75vw; }  
+    .ProductsTable_th:nth-child(6) { min-width: 34.375vw; } 
+    .ProductsTable_th:nth-child(7) { min-width: 43.75vw; }  
+    .ProductsTable_th:nth-child(8) { min-width: 50vw; }     
+
+    
+    .ProductsTable_tbody {
+        background: transparent;
+    }
+
+    .ProductsTable_row {
+        background: transparent;
+        transition: background-color 0.2s ease;
+        border-bottom: 0.31vw solid rgba(255, 255, 255, 0.05);
+    }
+
+    .ProductsTable_row:hover {
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    .ProductsTable_td {
+        padding: 3.125vw; 
+        font-size: 4.375vw; 
+        font-weight: 400;
+        color: var(--clr-white);
+        vertical-align: middle;
+        border-bottom: 0.31vw solid rgba(255, 255, 255, 0.12);
+        letter-spacing: -0.03em;
+        line-height: 110%;
+    }
+
+    .ProductsTable_tbody tr:last-child .ProductsTable_td {
+        border-bottom-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .ProductsTable_td_checkbox {
+        width: 12.5vw;
+        padding-left: 3.125vw;
+    }
+
+    .ProductsTable_td_secondary {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    
+    .ProductsTable_checkbox {
+        width: 5.625vw; 
+        height: 5.625vw;
+        cursor: pointer;
+        border-radius: 1.25vw;
+    }
+
+    
+    .ProductsTable_name-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2.5vw;
+        position: relative;
+    }
+
+    .ProductsTable_name {
+        font-size: 4.375vw; 
+        color: #ffffff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1;
+    }
+
+    .ProductsTable_name--clickable {
+        cursor: pointer;
+        transition: color 0.2s ease, text-decoration 0.2s ease;
+    }
+
+    .ProductsTable_name--clickable:hover {
+        color: rgba(205, 255, 255, 1);
+        text-decoration: underline;
+    }
+
+    
+    .ProductsTable_more-btn {
+        width: 6.25vw; 
+        height: 6.25vw;
+        border-radius: 50%;
+        border: none;
+        background: transparent;
+        padding: 0;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    .ProductsTable_more-btn img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    
+    .ProductsTable_context {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 50vw; 
+        background: rgba(40, 40, 40, 0.98);
+        border-radius: 2.5vw;
+        padding: 2.5vw;
+        z-index: 100;
+        box-shadow: 0 1.875vw 6.25vw rgba(0, 0, 0, 0.5);
+    }
+
+    .ProductsTable_context button {
+        width: 100%;
+        background: transparent;
+        border: none;
+        padding: 3.125vw 3.75vw;
+        text-align: left;
+        font-size: 4.375vw; 
+        color: #fff;
+        cursor: pointer;
+        white-space: nowrap;
+        border-radius: 1.875vw;
+    }
+
+    .ProductsTable_context button:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    
+    .ProductsTable_toggle {
+        display: flex;
+        align-items: center;
+        gap: 3.125vw;
+        cursor: pointer;
+    }
+
+    .ProductsTable_toggle_input {
+        display: none;
+    }
+
+    .ProductsTable_toggle_slider {
+        width: 12.5vw; 
+        height: 5.94vw; 
+        background-color: rgba(145, 145, 145, 1);
+        border-radius: 3vw;
+        position: relative;
+        transition: background-color 0.3s ease;
+    }
+
+    .ProductsTable_toggle_slider::before {
+        content: '';
+        position: absolute;
+        width: 4.69vw; 
+        height: 4.69vw;
+        background-color: black;
+        border-radius: 50%;
+        top: 0.625vw;
+        left: 0.625vw;
+        transition: all 0.3s ease;
+    }
+
+    .ProductsTable_toggle_input:checked + .ProductsTable_toggle_slider {
+        background-color: rgba(205, 255, 255, 1);
+    }
+
+    .ProductsTable_toggle_input:checked + .ProductsTable_toggle_slider::before {
+        background-color: black;
+        transform: translateX(6.56vw); 
+    }
+
+    .ProductsTable_toggle_label {
+        font-size: 5vw; 
+        font-weight: 400;
+        color: var(--clr-white);
+        white-space: nowrap;
+    }
+
+    
+    .ProductsTable_footer {
+        margin-top: 6.25vw;
+        display: flex;
+        justify-content: end;
+    }
+}

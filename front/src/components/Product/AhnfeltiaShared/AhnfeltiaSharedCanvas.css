@@ -1,0 +1,13 @@
+.AhnfeltiaSharedCanvas {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.AhnfeltiaSharedCanvas canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+

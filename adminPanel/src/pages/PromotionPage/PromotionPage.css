@@ -1,0 +1,499 @@
+.PromotionPage { width: 100%; }
+.PromotionPage_card { background: #262626; border-radius: 0.729vw; padding: 0.938vw; }
+.PromotionPage_title { font-size: 2.188vw; color: #fff; font-weight: 400; margin: 0 0 2.083vw; }
+.PromotionPage_search input {
+  width: 100%; height: 1.875vw; border: none; border-radius: 0.313vw; background: #434343; color: #fff; padding: 0 0.521vw;
+}
+.PromotionPage_search input::placeholder {
+  font-size: 0.938vw;
+}
+.PromotionPage_table { width: 100%; border-collapse: collapse; margin-top: 0.625vw; table-layout: fixed; }
+.PromotionPage_table th, .PromotionPage_table td {
+  padding: 0.625vw 0; border-bottom: 0.052vw solid rgba(255,255,255,.12); color: rgba(255,255,255,.85); font-size: 0.938vw; text-align: left;
+}
+.PromotionPage_table td { vertical-align: middle; white-space: nowrap; }
+.PromotionPage_table th { color: rgba(255,255,255,.55); font-size: 1.25vw; }
+.PromotionPage_table th:nth-child(1),
+.PromotionPage_table td:nth-child(1) { width: 97%; }
+.PromotionPage_table th:nth-child(2),
+.PromotionPage_table td:nth-child(2) { width: 29%; }
+.PromotionPage_table th:nth-child(3),
+.PromotionPage_table td:nth-child(3) { width: 21%; }
+
+.PromotionPage_cellTitle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.35vw;
+}
+.PromotionPage_cellTitle > span {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.PromotionPage_cellFormat { position: relative; }
+.PromotionPage_cellFormatContent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35vw;
+}
+.PromotionPage_formatIcon {
+  width: 1.042vw;
+  height: 1.042vw;
+  min-width: 14px;
+  min-height: 14px;
+  object-fit: contain;
+  margin-right: 0.417vw;
+  display: block;
+}
+.PromotionPage_more {
+  border: none;
+  background: transparent;
+  color: #fff;
+  margin-left: auto;
+  margin-right: 0;
+  cursor: pointer;
+  font-size: 0.95vw;
+  line-height: 1;
+  padding: 0;
+}
+.PromotionPage_menu {
+  position: absolute; top: 1.458vw; right: 0; z-index: 5; width: 10.854vw; background: #d9d9d9; border-radius: 0.417vw; overflow: hidden;
+}
+.PromotionPage_menu button {
+  width: 100%; text-align: left; padding: 0.521vw 0.625vw; border: none; background: transparent; cursor: pointer; color: #4b4b4b; font-size: 0.938vw;
+}
+.PromotionPage_menu button:hover { background: rgba(0,0,0,.08); }
+.PromotionPage_menu .danger { color: #7d1111; }
+.PromotionPage_status {
+  color: rgba(255,255,255,.7);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35vw;
+  line-height: 1;
+}
+.PromotionPage_status--active {
+  color: rgba(235,255,255,.95);
+}
+.PromotionPage_statusIcon {
+  width: 1.458vw;
+  height: 1.094vw;
+  min-width: 12px;
+  min-height: 0.625vw;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.PromotionPage_overlay { position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 70; }
+.PromotionPage_modal {
+  position: fixed; right: 0; top: 0; width: 22.5vw; min-width: 410px; max-width: 100vw; height: 100vh; z-index: 80; background: #060606;
+  padding: 1.146vw 0.938vw; display: flex; flex-direction: column; gap: 0.833vw;
+  overflow-y: auto;
+}
+.PromotionPage_modalTitle { margin: 0 0 0.521vw; color: #fff; font-size: 2.292vw; font-weight: 400; line-height: 1.05; text-transform: uppercase; }
+.PromotionPage_modalLabel { color: rgba(255,255,255,.9); font-size: 0.833vw; margin-bottom: 0.313vw; }
+.PromotionPage_modalSection { display: flex; flex-direction: column; gap: 0.313vw; }
+.PromotionPage_typeCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.313vw;
+  position: relative;
+}
+.PromotionPage_previewBox {
+  height: 8.75vw;
+  border-radius: 0.365vw;
+  background: #2a2a2a;
+}
+.PromotionPage_previewBox--text {
+  overflow: hidden;
+}
+.PromotionPage_previewBox.isDisabled {
+  opacity: .45;
+  pointer-events: none;
+}
+.PromotionPage_previewBox--upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, .75);
+  font-size: 0.729vw;
+  gap: 0.313vw;
+}
+.PromotionPage_previewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+.PromotionPage_uploadIcon {
+  font-size: 0.938vw;
+  line-height: 1;
+}
+.PromotionPage_textArea {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 0.729vw;
+  line-height: 1.4;
+  padding: 0.625vw;
+  resize: none;
+}
+.PromotionPage_textArea::placeholder {
+  color: rgba(255,255,255,.45);
+}
+.PromotionPage_statusBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.313vw;
+}
+.PromotionPage_selectTrigger {
+  width: 100%;
+  height: 1.875vw;
+  border-radius: 0.313vw;
+  border: 0.052vw solid #3b3b3b;
+  background: #414141;
+  color: #fff;
+  padding: 0 0.625vw;
+  font-size: 0.729vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.PromotionPage_selectArrow {
+  font-size: 0.781vw;
+  color: rgba(255,255,255,.8);
+  transition: transform .2s ease;
+}
+.PromotionPage_selectArrow--open { transform: rotate(180deg); }
+.PromotionPage_selectDropdown {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 0.208vw);
+  background: #d9d9d9;
+  border-radius: 0.313vw;
+  overflow: hidden;
+  box-shadow: 0 0.417vw 1.042vw rgba(0,0,0,.25);
+  z-index: 40;
+}
+.PromotionPage_selectOption {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #4b4b4b;
+  padding: 0.521vw 0.625vw;
+  font-size: 0.781vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.417vw;
+  cursor: pointer;
+  text-align: left;
+}
+.PromotionPage_selectOption:hover { background: rgba(0,0,0,.08); }
+.PromotionPage_optionCheck {
+  width: 0.729vw;
+  height: 0.729vw;
+  border: 0.052vw solid #4b4b4b;
+  border-radius: 0.156vw;
+  flex-shrink: 0;
+}
+.PromotionPage_optionCheck--active { background: #2f2f2f; border-color: #2f2f2f; }
+.PromotionPage_previewPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,.55);
+  font-size: 0.781vw;
+}
+.PromotionPage_toggleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255,255,255,.82);
+  font-size: 0.729vw;
+}
+.PromotionPage_hiddenInput {
+  position: absolute !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+.PromotionPage_actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.521vw;
+  margin-top: 0.833vw;
+  padding-top: 0.313vw;
+}
+.PromotionPage_actions .save, .PromotionPage_actions .cancel {
+  width: 100%;
+  height: 2.188vw;
+  border-radius: 0.313vw;
+  cursor: pointer;
+  font-size: 0.781vw;
+}
+.PromotionPage_actions .save { border: none; background: #cdffff; color: #111; }
+.PromotionPage_actions .cancel { border: 0.052vw solid rgba(255,255,255,.65); background: transparent; color: #fff; }
+
+@media (max-width: 1024px) {
+  .PromotionPage_modal {
+    width: 100vw;
+    min-width: 0;
+    padding: 12px;
+  }
+  .PromotionPage_modalTitle {
+    font-size: 28px;
+  }
+  .PromotionPage_modalLabel {
+    font-size: 14px;
+  }
+  .PromotionPage_previewBox {
+    height: 140px;
+  }
+  .PromotionPage_selectTrigger { height: 44px; border-radius: 8px; padding: 0 12px; font-size: 14px; border-width: 1px; }
+  .PromotionPage_selectArrow { font-size: 14px; }
+  .PromotionPage_selectDropdown { top: calc(100% + 4px); border-radius: 8px; }
+  .PromotionPage_selectOption { padding: 10px 12px; font-size: 14px; }
+  .PromotionPage_optionCheck { width: 14px; height: 14px; border-width: 1px; border-radius: 3px; }
+  .PromotionPage_previewBox--upload { font-size: 14px; gap: 6px; }
+  .PromotionPage_uploadIcon { font-size: 18px; }
+  .PromotionPage_textArea { font-size: 14px; padding: 12px; }
+  .PromotionPage_previewPlaceholder { font-size: 14px; }
+  .PromotionPage_actions .save, .PromotionPage_actions .cancel { height: 44px; border-radius: 8px; font-size: 14px; }
+}
+
+@media (max-width: 767px) {
+  .PromotionPage_card {
+    border-radius: 3.333vw;
+    padding: 2.778vw;
+  }
+
+  .PromotionPage_title {
+    font-size: 8.889vw;
+    line-height: 0.95;
+    margin-bottom: 2.222vw;
+  }
+
+  .PromotionPage_search input {
+    height: 9.444vw;
+    border-radius: 1.667vw;
+    padding: 0 2.778vw;
+    font-size: 3.889vw;
+  }
+
+  .PromotionPage_search input::placeholder {
+    font-size: 3.889vw;
+  }
+
+  .PromotionPage_table {
+    margin-top: 2.222vw;
+  }
+
+  .PromotionPage_table thead {
+    display: none;
+  }
+
+  .PromotionPage_table tbody tr {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 4.444vw auto;
+    grid-template-areas:
+      "title fmtIcon format"
+      "menu  stIcon status";
+    column-gap: 2.222vw;
+    row-gap: 1.667vw;
+    align-items: center;
+    padding: 2.5vw 0 3.2vw;
+    border-bottom: 0.278vw solid rgba(255, 255, 255, 0.14);
+  }
+
+  .PromotionPage_table td {
+    padding: 0;
+    border-bottom: none;
+    font-size: 3.889vw;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  .PromotionPage_table td:first-child {
+    grid-area: title;
+    color: rgba(255, 255, 255, 0.95);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+  }
+
+  .PromotionPage_cellFormat {
+    grid-area: format;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+  }
+  .PromotionPage_cellFormatContent {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .PromotionPage_formatIcon {
+    display: inline-block;
+    width: 4.444vw;
+    height: 4.444vw;
+    min-width: 4.444vw;
+    min-height: 4.444vw;
+    margin-right: 0;
+    position: absolute;
+    right: calc(100% + 2.222vw);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .PromotionPage_cellFormat span {
+    overflow: visible;
+    text-overflow: clip;
+    white-space: nowrap;
+  }
+
+
+
+
+  .PromotionPage_table td:last-child {
+    grid-area: status;
+    justify-self: end;
+  }
+
+  .PromotionPage_status {
+    font-size: 3.889vw;
+    gap: 1.389vw;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .PromotionPage_statusIcon {
+    width: 4.444vw;
+    height: 4.444vw;
+    min-width: 4.444vw;
+    min-height: 4.444vw;
+    position: absolute;
+    right: calc(100% + 2.222vw);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .PromotionPage_more {
+    position: absolute;
+    left: -50vw;
+    bottom: -5vw;
+    margin-right: 0;
+    font-size: 3.889vw;
+    line-height: 1;
+    padding: 0;
+    z-index: 3;
+  }
+
+  .PromotionPage_menu {
+    top: 11vw;
+    left: -51vw;
+    width: 50vw;
+    min-width: 155px;
+    border-radius: 1.667vw;
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .PromotionPage_menu button {
+    padding: 2.222vw 2.778vw;
+    font-size: 3.889vw;
+    white-space: nowrap;
+  }
+
+  .PromotionPage_modal {
+    width: min(94vw, 360px);
+    min-width: 0;
+    padding: 16px 12px;
+    right: 0;
+  }
+  .PromotionPage_modalTitle {
+    font-size: clamp(22px, 6.8vw, 28px);
+    line-height: 1.05;
+    margin-bottom: 12px;
+  }
+  .PromotionPage_modalLabel {
+    font-size: 4.8vw;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .PromotionPage_modalSection {
+    gap: 8px;
+  }
+  .PromotionPage_selectTrigger {
+    height: 9.2vw;
+    min-height: 34px;
+    border-radius: 8px;
+    font-size: 4.4vw;
+    padding: 0 12px;
+    border-width: 1px;
+  }
+  .PromotionPage_selectArrow {
+    font-size: 12px;
+  }
+  .PromotionPage_selectDropdown {
+    top: calc(100% + 4px);
+    border-radius: 8px;
+  }
+  .PromotionPage_selectOption {
+    padding: 10px 12px;
+    font-size: 4.2vw;
+    line-height: 1.1;
+  }
+  .PromotionPage_optionCheck {
+    width: 14px;
+    height: 14px;
+    border-width: 1px;
+    border-radius: 3px;
+  }
+  .PromotionPage_previewBox {
+    height: 36vw;
+    min-height: 120px;
+    border-radius: 8px;
+  }
+  .PromotionPage_previewBox--upload {
+    font-size: 4.6vw;
+    gap: 8px;
+  }
+  .PromotionPage_uploadIcon {
+    font-size: 20px;
+  }
+  .PromotionPage_textArea {
+    padding: 12px;
+    font-size: 4.6vw;
+  }
+  .PromotionPage_previewPlaceholder {
+    font-size: 4.6vw;
+  }
+  .PromotionPage_actions {
+    gap: 10px;
+    margin-top: 12px;
+    padding-top: 0;
+  }
+  .PromotionPage_actions .save,
+  .PromotionPage_actions .cancel {
+    height: 9.6vw;
+    min-height: 36px;
+    border-radius: 8px;
+    font-size: 4.6vw;
+  }
+}

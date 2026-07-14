@@ -1,0 +1,54 @@
+.AppLoader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--clr-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.AppLoader_inner {
+  width: min(520px, 86vw);
+  text-align: center;
+}
+
+.AppLoader_title {
+  font-family: 'Hikasami', sans-serif;
+  font-size: clamp(44px, 5.2vw, 92px);
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+  color: var(--clr-white);
+  line-height: 1;
+}
+
+.AppLoader_subtitle {
+  margin-top: 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(14px, 1.05vw, 18px);
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.82);
+  text-transform: uppercase;
+}
+
+.AppLoader_bar {
+  margin: 22px auto 0;
+  height: 2px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.18);
+  overflow: hidden;
+}
+
+.AppLoader_barFill {
+  height: 100%;
+  width: 42%;
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateX(-140%);
+  animation: appLoaderRun 1.05s linear infinite;
+}
+
+@keyframes appLoaderRun {
+  0% { transform: translateX(-140%); }
+  100% { transform: translateX(240%); }
+}
+

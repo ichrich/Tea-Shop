@@ -1,0 +1,248 @@
+
+.RevenueChart {
+    width: 44.792vw;
+    height: 35.208vw;
+    background-color: #FFFFFF26;
+    border-radius: 0.781vw;
+    padding: 2.083vw 2.292vw 2.083vw 1.875vw;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.RevenueChart_header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.083vw;
+    gap: 9.219vw;
+}
+
+.RevenueChart_title {
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 1.615vw;
+    line-height: 110.00000000000001%;
+    letter-spacing: -3%;
+    color: var(--clr-white);
+    margin: 0;
+}
+.RevenueChart_product{
+    max-width: 13vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.26vw;
+}
+.RevenueChart_product_name{
+    font-family: Inter;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 1.042vw;
+    line-height: 110.00000000000001%;
+    letter-spacing: -3%;
+}
+.RevenueChart_tabs {
+    display: flex;
+    gap: 1.04vw;
+}
+
+.RevenueChart_tab {
+    display: flex;
+    align-items: center;
+    gap: 0.52vw;
+    padding: 0.52vw 0;
+    font-size: 0.73vw;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    color: var(--clr-white);
+}
+
+.RevenueChart_tab_indicator {
+    width: 0.63vw;
+    height: 0.63vw;
+    border-radius: 50%;
+}
+
+.RevenueChart_tab_indicator.income {
+    background-color: rgba(205, 255, 255, 1);
+}
+
+.RevenueChart_tab_indicator.views {
+    background-color: #2600ff;
+}
+
+.RevenueChart_graph {
+    flex: 1;
+    display: flex;
+    gap: 0.833vw;
+}
+
+
+.RevenueChart_y_axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 17.4vw;
+    margin-top: 3.906vw;
+}
+
+.RevenueChart_y_label {
+    font-size: 0.75vw;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 1;
+}
+
+.RevenueChart_plot {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.RevenueChart_svg {
+    width: 38.8vw;
+    
+    height: 25.156vw;
+    
+    flex-shrink: 0;
+}
+
+.RevenueChart_x_axis {
+    width: 100%;
+    height: 1.302vw;
+    margin-top: 0.729vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.RevenueChart_x_label {
+    font-size: 0.729vw;
+    color: rgba(255, 255, 255, 1);
+    white-space: nowrap;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .RevenueChart {
+        width: 100%;
+        height: 50.39vw;
+        border-radius: 2.08vw;
+        padding: 2.60vw;
+    }
+
+    .RevenueChart_header {
+        margin-bottom: 2.08vw;
+    }
+
+    .RevenueChart_title {
+        font-size: 2.34vw;
+    }
+
+    .RevenueChart_tabs {
+        gap: 2.08vw;
+    }
+
+    .RevenueChart_tab {
+        gap: 1.04vw;
+        padding: 1.04vw 0;
+        font-size: 1.82vw;
+    }
+
+    .RevenueChart_tab_indicator {
+        width: 1.56vw;
+        height: 1.56vw;
+    }
+
+    .RevenueChart_graph {
+        gap: 1.04vw;
+    }
+
+    .RevenueChart_y_axis {
+        height: 26.25vw;
+        margin-top: 1.5vw;
+    }
+
+    .RevenueChart_y_label {
+        font-size: 1.82vw;
+    }
+
+    .RevenueChart_svg {
+        width: 37.292vw;
+        height: 26.25vw;
+    }
+
+    .RevenueChart_x_axis {
+        width: 37.292vw;
+        padding-top: 1.04vw;
+    }
+
+    .RevenueChart_x_label {
+        font-size: 1.82vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .RevenueChart {
+        width: 100%;
+        height: 108.89vw;
+        border-radius: 2.78vw;
+        padding: 4.17vw;
+    }
+
+    .RevenueChart_header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 4.17vw;
+        gap: 2.78vw;
+    }
+
+    .RevenueChart_title {
+        font-size: 4.5vw;
+        font-weight: 600;
+    }
+
+    .RevenueChart_tabs {
+        gap: 4.17vw;
+    }
+
+    .RevenueChart_tab {
+        gap: 2.22vw;
+        padding: 0;
+        font-size: 3.89vw;
+    }
+
+    .RevenueChart_tab_indicator {
+        width: 2.78vw;
+        height: 2.78vw;
+    }
+
+    .RevenueChart_graph {
+        gap: 2.78vw;
+    }
+
+    .RevenueChart_y_axis {
+        height: 26.25vw;
+        margin-top: 1.5vw;
+    }
+
+    .RevenueChart_y_label {
+        font-size: 4vw;
+    }
+
+    .RevenueChart_svg {
+        width: 37.292vw;
+        height: 26.25vw;
+    }
+
+    .RevenueChart_x_axis {
+        width: 37.292vw;
+        padding-top: 2.78vw;
+    }
+
+    .RevenueChart_x_label {
+        font-size: 4vw;
+    }
+}

@@ -1,0 +1,591 @@
+
+
+:root {
+    --gap: 1.04vw;
+    --container-padding: 3.13vw;
+}
+
+.catalog {
+    padding-top: 5vw;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--clr-bg);
+}
+
+.catalog__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.08vw;
+}
+
+.Katalog {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 2.92vw;
+    line-height: 110%;
+    letter-spacing: -3%;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0;
+}
+
+.search-container {
+    position: relative;
+    flex: 0 0 29.17vw;
+}
+
+.search-input {
+    width: 100%;
+    height: 2.29vw;
+    padding: 0.52vw 3.13vw 0.52vw 1.04vw;
+    border-radius: 5.21vw;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.73vw;
+    color: #FFFFFF66;
+}
+
+.search-icon {
+    position: absolute;
+    right: 1.04vw;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.04vw;
+    height: 1.04vw;
+    cursor: pointer;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 0.52vw;
+}
+
+.filter-dropdown {
+    position: relative;
+}
+
+.Knopka_filtry_katalog {
+    display: flex;
+    padding: 0.26vw 1.56vw;
+    border-radius: 52.08vw;
+    background: rgba(85, 85, 85, 1);
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.73vw;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.3s;
+}
+
+.Knopka_filtry_katalog img {
+    filter: brightness(0) invert(1);
+}
+
+.Component_54,
+.Component_53,
+.Component_51 {
+    position: absolute;
+    top: calc(100% + 0.52vw);
+    left: 0;
+    background: #555555;
+    border-radius: 0.52vw;
+    padding: 0.8vw;
+    box-shadow: 0 0.26vw 1.04vw rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+.Component_54 {
+    width: 7.6vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.52vw;
+}
+
+.Component_53 {
+    width: 5.89vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.52vw;
+}
+
+.Component_51 {
+    width: 13.59vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.52vw;
+}
+
+.Component_54 label,
+.Component_51 label {
+    display: flex;
+    align-items: center;
+    gap: 0.52vw;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.73vw;
+    font-weight: 400;
+    color: white;
+}
+
+.Component_54 input[type="checkbox"],
+.Component_51 input[type="checkbox"] {
+    width: 0.83vw;
+    height: 0.83vw;
+    cursor: pointer;
+}
+
+.price-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vw;
+}
+
+.price-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.73vw;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.price-input {
+    width: 100%;
+    border: 0.05vw solid #ddd;
+    border-radius: 0.26vw;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.73vw;
+    outline: none;
+    background: #555555;
+    color: white;
+}
+
+.price-input::placeholder {
+    color: #999;
+}
+
+.price-input::-webkit-outer-spin-button,
+.price-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.price-input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.filter-toggle-wrapper {
+    position: relative;
+    display: none;
+}
+
+.filter-toggle-btn {
+    display: flex;
+    width: 10.47vw;
+    height: 5.47vw;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 1000px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.filter-toggle-btn img {
+    width: 2.6vw;
+    height: 2.6vw;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.3vw;
+}
+
+.filter-dropdown-panel {
+    position: absolute;
+    top: calc(100% + 1.3vw);
+    right: 0;
+    width: 34vw;
+    background: #555555;
+    border-radius: 1.3vw;
+    padding: 2.6vw;
+    box-shadow: 0 0.52vw 2.08vw rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    gap: 2.6vw;
+}
+
+.filter-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3vw;
+}
+
+.filter-section-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1.82vw;
+    color: #ffffff;
+    margin: 0;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1.04vw;
+}
+
+.filter-options label {
+    display: flex;
+    align-items: center;
+    gap: 1.04vw;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.56vw;
+    color: #ffffff;
+}
+
+.filter-options input[type="checkbox"] {
+    width: 2.08vw;
+    height: 2.08vw;
+    cursor: pointer;
+}
+
+.filter-price-inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 1.04vw;
+}
+
+
+.detailed-products-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3.13vw;
+}
+
+.DetailedProductCard-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.DetailedProductCard-wrapper.reverse .DetailedProductCard {
+    flex-direction: row-reverse;
+}
+
+
+.products-grid {
+    display: none;
+}
+
+.Component_38 {
+    gap: 0.3vw;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 3.13vw auto 0;
+    padding: 0.52vw 1.56vw;
+    border-radius: 2.34vw;
+    background: transparent;
+    border: 0.1vw solid rgba(255, 255, 255, 0.3);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9vw;
+    font-weight: 400;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.Component_38:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.Component_38 img {
+    width: 0.9vw;
+    height: 0.9vw;
+    object-fit: contain;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    :root {
+        --gap: 1.3vw;
+        --container-padding: 4vw;
+    }
+
+    .catalog {
+        padding-top: 10vw;
+    }
+
+    .catalog__header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4vw;
+        gap: 2vw;
+    }
+
+    .Katalog {
+        font-size: 4.3vw;
+        font-weight: 600;
+    }
+
+    .search-container {
+        flex: 0 0 34.8vw;
+    }
+
+    .search-input {
+        height: 5.47vw;
+        padding: 1.3vw 5.2vw 1.3vw 2.6vw;
+        font-size: 2.3vw;
+        border-radius: 13.02vw;
+    }
+
+    .search-icon {
+        width: 2.6vw;
+        height: 2.6vw;
+        right: 2.6vw;
+    }
+
+    .filter-buttons {
+        gap: 1.3vw;
+        margin-bottom: 2.6vw;
+    }
+
+    .Knopka_filtry_katalog {
+        height: 5.47vw;
+        padding: 1.3vw 3.9vw;
+        font-size: 1.82vw;
+        border-radius: 130.2vw;
+    }
+
+    .Component_54,
+    .Component_53,
+    .Component_51 {
+        width: 34vw;
+        padding: 2.6vw;
+        gap: 1.3vw;
+    }
+
+    .Component_54 label,
+    .Component_51 label {
+        font-size: 1.82vw;
+        gap: 1.3vw;
+    }
+
+    .Component_54 input[type="checkbox"],
+    .Component_51 input[type="checkbox"] {
+        width: 2.08vw;
+        height: 2.08vw;
+    }
+
+    .price-input-group {
+        gap: 0.65vw;
+    }
+
+    .price-label {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.82vw;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    .price-input {
+        font-size: 1.82vw;
+        border-radius: 0.9vw;
+    }
+
+    .filter-toggle-wrapper {
+        display: block;
+    }
+
+    .desktop-filters {
+        display: none;
+    }
+
+    .catalog__header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-right {
+        display: flex;
+        gap: 1.3vw;
+    }
+
+    
+    .detailed-products-grid {
+        gap: 5.49vw;
+    }
+
+    .Component_38 {
+        height: 5.47vw;
+        padding: 1.3vw 3.9vw;
+        font-size: 1.82vw;
+        gap: 0.65vw;
+        border-radius: 5.86vw;
+        margin-top: 5.49vw;
+    }
+
+    .Component_38 img {
+        width: 2.3vw;
+        height: 2.3vw;
+    }
+}
+
+
+@media (max-width: 767px) {
+    :root {
+        --gap: 2.78vw;
+        --container-padding: 5vw;
+    }
+
+    .catalog {
+        padding-top: 13vw;
+    }
+
+    .catalog__header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4vw;
+        margin-bottom: 8vw;
+    }
+
+    .Katalog {
+        font-size: 6.89vw;
+        font-weight: 600;
+    }
+
+    .header-right {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        gap: 2.78vw;
+    }
+
+    .search-container {
+        flex: 0;
+        position: relative;
+        width: 11.67vw;
+        height: 11.67vw;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search-input {
+        display: none;
+    }
+
+    .search-icon {
+        position: static;
+        transform: none;
+        width: 5.56vw;
+        height: 5.56vw;
+        cursor: pointer;
+    }
+
+    .filter-toggle-wrapper {
+        display: block;
+    }
+
+    .filter-toggle-btn {
+        display: flex;
+        width: 20.89vw;
+        height: 11.67vw;
+        background: rgba(255, 255, 255, 0.3);
+        border: none;
+        border-radius: 1000px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+    }
+
+    .filter-toggle-btn img {
+        width: 5.56vw;
+        height: 5.56vw;
+    }
+
+    .filter-dropdown-panel {
+        width: 75vw;
+        right: 0;
+        padding: 5.56vw;
+        gap: 5.56vw;
+        border-radius: 2.78vw;
+    }
+
+    .filter-section {
+        gap: 3.33vw;
+    }
+
+    .filter-section-title {
+        font-size: 4.44vw;
+    }
+
+    .filter-options {
+        gap: 2.78vw;
+    }
+
+    .filter-options label {
+        font-size: 3.89vw;
+        gap: 2.78vw;
+    }
+
+    .filter-options input[type="checkbox"] {
+        width: 4.44vw;
+        height: 4.44vw;
+    }
+
+    .filter-price-inputs {
+        gap: 2.78vw;
+    }
+
+    .price-label {
+        font-size: 3.89vw;
+    }
+
+    .price-input {
+        font-size: 3.89vw;
+        border-radius: 1.7vw;
+    }
+
+    .desktop-filters {
+        display: none;
+    }
+
+    
+    .detailed-products-grid {
+        gap: 8vw;
+    }
+
+    .Component_38 {
+        margin-top: 8vw;
+        padding: 2.78vw 8.33vw;
+        font-size: 3.89vw;
+        gap: 1.39vw;
+        border-radius: 12.5vw;
+    }
+
+    .Component_38 img {
+        width: 4.78vw;
+        height: 4.78vw;
+    }
+
+    .price-input-group {
+        gap: 2.8vw;
+    }
+}

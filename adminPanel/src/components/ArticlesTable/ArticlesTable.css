@@ -1,0 +1,728 @@
+
+
+
+.ArticlesTable {
+    width: 100%;
+    position: relative;
+    
+    min-height: 100%;
+}
+
+.ArticlesTable_wrapper {
+    width: 100%;
+    margin-bottom: 1.56vw;
+    position: relative;
+}
+
+.ArticlesTable_table {
+    width: 100%;
+    min-width: 800px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.ArticlesTable_table thead {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ArticlesTable_th {
+    padding: 1.042vw 1.04vw 2.083vw 0;
+    text-align: left;
+    font-size: 0.85vw;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--clr-white);
+    white-space: nowrap;
+}
+
+
+.ArticlesTable_th--title {
+    width: auto;
+    min-width: 200px;
+}
+
+
+.ArticlesTable_th--category {
+    width: 10vw;
+    min-width: 120px;
+}
+
+.ArticlesTable_th--date {
+    width: 8vw;
+    min-width: 100px;
+}
+
+.ArticlesTable_th--watches {
+    width: 10vw;
+    min-width: 120px;
+}
+
+.ArticlesTable_th--status {
+    width: 12vw;
+    min-width: 140px;
+}
+
+
+.ArticlesTable_table th:last-child,
+.ArticlesTable_table td:last-child {
+    padding-right: 0;
+}
+
+.ArticlesTable_th_content {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 1.25vw;
+    line-height: 110%;
+    letter-spacing: -3%;
+    text-transform: uppercase;
+    color: #A8A8A8;
+}
+
+.ArticlesTable_sort {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+.ArticlesTable_sort:hover {
+    opacity: 1;
+}
+
+.ArticlesTable_sort img {
+    width: 0.73vw;
+    height: 0.73vw;
+}
+
+.ArticlesTable_row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.ArticlesTable_row:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+.ArticlesTable_table td {
+    padding: 0.78vw 1.04vw 0.78vw 0;
+    font-size: 0.938vw;
+    font-weight: 400;
+    color: var(--clr-white);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.ArticlesTable_checkbox {
+    width: 1.04vw;
+    height: 1.04vw;
+    cursor: pointer;
+    accent-color: var(--clr-accent-blue);
+}
+
+
+.ArticlesTable_title_cell {
+    display: flex;
+    align-items: center;
+    gap: 7.97vw;
+    min-width: 200px;
+}
+
+.ArticlesTable_actions {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.ArticlesTable_menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: calc(100% + 0.5vw);
+    width: 11.354vw;
+    height: auto;
+    background: #D9D9D9;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.6vw;
+    box-shadow: 0 0.6vw 1.6vw rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    z-index: 10;
+}
+
+.ArticlesTable_menu_item {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    color: #4C4C4C;
+    padding: 0.8vw 1vw;
+    font-size: 0.85vw;
+    cursor: pointer;
+}
+
+.ArticlesTable_menu_item:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.ArticlesTable_menu_item--danger {
+    color: #4C4C4C;
+}
+
+.ArticlesTable_title_cell span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    flex: 1;
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 0.938vw;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.ArticlesTable_cell_with_icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 5.26vw;
+    gap: 0.521vw;
+}
+
+.con {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ArticlesTable_pointer {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ArticlesTable_pointer:hover {
+    opacity: 1;
+}
+
+.ArticlesTable_pointer img {
+    width: 1.21vw;
+    height: 0.83vw;
+}
+
+
+.ArticlesTable_toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.52vw;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.ArticlesTable_toggle input {
+    display: none;
+}
+
+.ArticlesTable_toggle_slider {
+    width: 2.60vw;
+    height: 1.30vw;
+    background-color: rgba(140, 140, 140, 1);
+    border-radius: 1.30vw;
+    position: relative;
+    transition: background-color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.ArticlesTable_toggle_slider::before {
+    content: '';
+    position: absolute;
+    width: 1.04vw;
+    height: 1.04vw;
+    background-color: black;
+    border-radius: 50%;
+    top: 0.13vw;
+    left: 0.13vw;
+    transition: transform 0.3s ease;
+}
+
+.ArticlesTable_toggle input:checked+.ArticlesTable_toggle_slider {
+    background-color: rgba(205, 255, 255, 1);
+}
+
+.ArticlesTable_toggle input:checked+.ArticlesTable_toggle_slider::before {
+    transform: translateX(1.30vw);
+}
+
+.ArticlesTable_toggle_text {
+    font-size: 0.93vw;
+    color: var(--clr-white);
+    white-space: nowrap;
+}
+
+
+
+.ArticlesTable_addButton_wrapper {
+    position: fixed;
+    bottom: 1.25vw;
+    right: 1.25vw;
+    z-index: 50;
+}
+
+.ArticlesTable_addButton {
+    width: 3.5vw;
+    height: 3.5vw;
+    min-width: 48px;
+    min-height: 48px;
+    background: #CDFFFF;
+    border: none;
+    border-radius: 0.8vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.4vw 1vw rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ArticlesTable_addButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.6vw 1.5vw rgba(0, 0, 0, 0.4);
+}
+
+.ArticlesTable_addButton svg {
+    width: 1.5vw;
+    height: 1.5vw;
+    min-width: 20px;
+    min-height: 20px;
+    color: #1a1a1a;
+}
+
+
+.ArticlesTable_addMenu {
+    position: absolute;
+    bottom: calc(100% + 0.8vw);
+    right: 0;
+    width: auto;
+    background: #D9D9D9;
+    border-radius: 0.6vw;
+    box-shadow: 0 0.4vw 1.2vw rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    z-index: 11;
+}
+
+.ArticlesTable_addMenu_item {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    color: #4C4C4C;
+    padding: 0.9vw 1.2vw;
+    font-size: 0.938vw;
+    font-family: Inter, sans-serif;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.ArticlesTable_addMenu_item:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .ArticlesTable_wrapper {
+        margin-bottom: 2.75vw;
+    }
+
+    .ArticlesTable_table {
+        min-width: 900px;
+    }
+
+    .ArticlesTable_th {
+        padding: 1.65vw 2.2vw 1.65vw 0;
+        font-size: 1.92vw;
+        white-space: nowrap;
+    }
+
+    .ArticlesTable_th--title {
+        min-width: 250px;
+    }
+
+    .ArticlesTable_th--category {
+        width: 15vw;
+        min-width: 120px;
+    }
+
+    .ArticlesTable_th--date {
+        width: 12vw;
+        min-width: 100px;
+    }
+
+    .ArticlesTable_th--watches {
+        width: 15vw;
+        min-width: 120px;
+    }
+
+    .ArticlesTable_th--status {
+        width: 18vw;
+        min-width: 140px;
+    }
+
+    .ArticlesTable_table th:last-child,
+    .ArticlesTable_table td:last-child {
+        padding-right: 0;
+    }
+
+    .ArticlesTable_sort img {
+        width: 3vw;
+        height: 3vw;
+    }
+
+    .ArticlesTable_table td {
+        padding: 1.65vw 2.2vw 1.65vw 0;
+        font-size: 1.92vw;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .ArticlesTable_checkbox {
+        width: 2.47vw;
+        height: 2.47vw;
+    }
+
+    .ArticlesTable_title_cell {
+        gap: 12.02vw;
+        min-width: 250px;
+    }
+
+    .ArticlesTable_title_cell span {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        flex: 1;
+    }
+
+    .ArticlesTable_pointer {
+        flex-shrink: 0;
+    }
+
+    .ArticlesTable_pointer img {
+        width: 2.55vw;
+        height: 2.2vw;
+    }
+
+    .ArticlesTable_toggle {
+        gap: 1.1vw;
+        min-width: 150px;
+    }
+
+    .ArticlesTable_toggle_slider {
+        width: 5.5vw;
+        height: 2.75vw;
+        border-radius: 2.75vw;
+        flex-shrink: 0;
+    }
+
+    .ArticlesTable_toggle_slider::before {
+        width: 2.2vw;
+        height: 2.2vw;
+        top: 0.27vw;
+        left: 0.27vw;
+    }
+
+    .ArticlesTable_toggle input:checked+.ArticlesTable_toggle_slider::before {
+        transform: translateX(2.75vw);
+    }
+
+    .ArticlesTable_toggle_text {
+        font-size: 1.92vw;
+        white-space: nowrap;
+    }
+
+    
+    .ArticlesTable_addButton_wrapper {
+        bottom: 2vw;
+        right: 2vw;
+    }
+
+    .ArticlesTable_addButton {
+        width: 6vw;
+        height: 6vw;
+        border-radius: 1.2vw;
+    }
+
+    .ArticlesTable_addButton svg {
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+
+    .ArticlesTable_addMenu {
+        width: 20vw;
+        min-width: 160px;
+        bottom: calc(100% + 1.2vw);
+        border-radius: 1vw;
+    }
+
+    .ArticlesTable_addMenu_item {
+        padding: 1.5vw 2vw;
+        font-size: 1.8vw;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .ArticlesTable_wrapper {
+        margin-bottom: 5vw;
+        width: 100%;
+        overflow-x: hidden; 
+    }
+
+    .ArticlesTable_mobileList {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-top: 0.278vw solid rgba(255, 255, 255, 0.14);
+    }
+
+    .ArticlesTable_mobileEmpty {
+        padding: 4vw 0;
+        text-align: center;
+        color: rgba(255,255,255,0.6);
+        font-size: 3.889vw;
+    }
+
+    .ArticlesTable_mobileEmpty--error {
+        color: rgba(255,80,80,0.9);
+    }
+
+    .ArticlesTable_mobileRow {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 8vw auto;
+        column-gap: 3vw;
+        row-gap: 2.8vw;
+        padding: 4vw 0;
+        border-bottom: 0.278vw solid rgba(255, 255, 255, 0.14);
+    }
+
+    .ArticlesTable_mobileCol {
+        display: grid;
+        grid-auto-rows: minmax(0, auto);
+        row-gap: 4.4vw;
+        min-width: 0;
+    }
+
+    .ArticlesTable_mobileLabel {
+        color: rgba(255,255,255,0.75);
+        font-size: 3.889vw;
+        line-height: 1.1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .ArticlesTable_mobileTitle {
+        color: rgba(255,255,255,0.92);
+        font-size: 3.889vw;
+        line-height: 1.1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+    .ArticlesTable_mobileValue {
+        color: rgba(255,255,255,0.92);
+        font-size: 3.889vw;
+        line-height: 1.1;
+        text-align: right;
+        white-space: nowrap;
+    }
+    .ArticlesTable_mobileIcon--date{
+        width: 3.889vw !important;
+        height: 4.167vw !important;
+    }
+    .ArticlesTable_mobileIcon {
+        width: 5.278vw;
+        height: 3.056vw;
+        object-fit: contain;
+        opacity: 0.95;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .ArticlesTable_mobileIcon--status {
+        width: 5.278vw;
+        height: 4.167vw;
+    }
+
+    .ArticlesTable_pointer--mobile {
+        width: auto;
+        height: 1vw;
+        padding: 0;
+        color: rgba(255,255,255,0.9);
+        font-size: 7vw;
+        line-height: 1;
+        justify-content: flex-start;
+    }
+
+    .ArticlesTable_menu--mobile {
+        left: 0;
+        right: auto;
+        top: calc(100% - 14vw);
+        width: 44.167vw;
+        z-index: 60;
+        height: 25.278vw;
+        border-radius: 1.389vw;
+    }
+    .ArticlesTable_menu_item{
+        font-size: 3.889vw;
+        padding: 1.778vw;
+    }
+
+    .ArticlesTable_th {
+        padding: 2.5vw 3.125vw 2.5vw 0;
+        font-size: 4vw;
+        white-space: nowrap;
+    }
+
+    .ArticlesTable_th--title {
+        min-width: 180px;
+    }
+
+    .ArticlesTable_th--category {
+        width: 18vw;
+        min-width: 80px;
+    }
+
+    .ArticlesTable_th--date {
+        width: 15vw;
+        min-width: 70px;
+    }
+
+    .ArticlesTable_th--watches {
+        width: 18vw;
+        min-width: 90px;
+    }
+
+    .ArticlesTable_th--status {
+        width: 22vw;
+        min-width: 110px;
+    }
+
+    .ArticlesTable_table th:last-child,
+    .ArticlesTable_table td:last-child {
+        padding-right: 0;
+    }
+
+    .ArticlesTable_sort img {
+        width: 7.125vw;
+        height: 6.125vw;
+    }
+
+    .ArticlesTable_table {
+        display: none;
+    }
+
+    .ArticlesTable_checkbox {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .ArticlesTable_title_cell {
+        gap: 2.5vw;
+        min-width: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .ArticlesTable_title_cell span {
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        max-width: 100%;
+        flex: 1;
+    }
+
+    .ArticlesTable_pointer {
+        flex-shrink: 0;
+    }
+
+    .ArticlesTable_pointer img {
+        width: 4.25vw;
+        height: 4.25vw;
+    }
+
+    .ArticlesTable_toggle {
+        gap: 2.5vw;
+        min-width: 0;
+    }
+
+    .ArticlesTable_toggle_slider {
+        width: 11.25vw;
+        height: 5.625vw;
+        border-radius: 5.625vw;
+        flex-shrink: 0;
+    }
+
+    .ArticlesTable_toggle_slider::before {
+        width: 4.375vw;
+        height: 4.375vw;
+        top: 0.625vw;
+        left: 0.625vw;
+    }
+
+    .ArticlesTable_toggle input:checked+.ArticlesTable_toggle_slider::before {
+        transform: translateX(5.625vw);
+    }
+
+    .ArticlesTable_toggle_text {
+        font-size: 3.75vw;
+        white-space: nowrap;
+    }
+
+    
+    .ArticlesTable_addButton_wrapper {
+        bottom: 4vw;
+        right: 4vw;
+    }
+
+    .ArticlesTable_addButton {
+        width: 10.556vw;
+        height: 10.556vw;
+        border-radius: 3vw;
+    }
+
+    .ArticlesTable_addButton svg {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .ArticlesTable_addMenu {
+        width: 40vw;
+        min-width: 140px;
+        bottom: calc(100% + 2vw);
+        border-radius: 2vw;
+    }
+
+    .ArticlesTable_addMenu_item {
+        padding: 3vw 4vw;
+        font-size: 3.5vw;
+    }
+}

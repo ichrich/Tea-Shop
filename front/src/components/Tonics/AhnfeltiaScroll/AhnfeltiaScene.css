@@ -1,0 +1,111 @@
+.AhnfeltiaScroll_wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 3.21vw;
+}
+
+.AhnfeltiaScroll_canvasWrap {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.AhnfeltiaScroll_canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.AhnfeltiaScroll_breadcrumbs {
+    position: relative;
+    z-index: 5;
+    padding-top: 2vw;
+    padding-bottom: 1vw;
+}
+
+.AhnfeltiaScroll_titleWrap {
+    position: relative;
+    z-index: 3;
+    height: calc(100vh - 6vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vw;
+    pointer-events: none;
+}
+
+.Ahn_title {
+    font-family: 'Hikasami', sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin: 0;
+    font-size: 4.64vw;
+    white-space: nowrap;
+    will-change: transform, opacity;
+}
+
+.AhnfeltiaScroll_descWrap {
+    position: absolute;
+    left: 50%;
+    top: 67.5%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    width: min(62vw, 980px);
+    pointer-events: none;
+}
+
+.Ahn_desc_common {
+    width: 62%;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.61vw;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.65);
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    line-height: 110%;
+    margin: 0;
+    text-align: center;
+    will-change: transform, opacity, filter;
+}
+
+.Ahn_desc_short {
+    opacity: 1;
+}
+
+.Ahn_desc_long {
+    opacity: 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .Ahn_title {
+        font-size: 7.03vw;
+    }
+    .Ahn_desc_common {
+        width: 92%;
+        font-size: 3.13vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .AhnfeltiaScroll_wrapper {
+        height: 60dvh;
+    }
+    .AhnfeltiaScroll_breadcrumbs {
+        padding-top: 13.21vw;
+    }
+    .Ahn_title {
+        font-size: 10.28vw;
+    }
+    .Ahn_desc_common {
+        width: 100%;
+        font-size: 5.28vw;
+    }
+}
+

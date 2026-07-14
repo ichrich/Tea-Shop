@@ -1,0 +1,1111 @@
+
+
+.SalesPage {
+	width: 100%;
+}
+
+.SalesPage_card {
+	width: 100%;
+	background-color: #262626;
+	border-radius: 1.04vw;
+	padding: 1.56vw;
+}
+
+.SalesPage_header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1.2vw;
+}
+
+.SalesPage_title {
+	font-size: 2.2vw;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: -0.03em;
+	line-height: 1.1;
+	color: var(--clr-white);
+	margin: 0;
+}
+
+.SalesPage_controls {
+	display: flex;
+	gap: 1.04vw;
+	margin-bottom: 0.8vw;
+}
+
+.SalesPage_search {
+	flex: 1;
+	height: 2.29vw;
+	background-color: rgba(64, 64, 64, 1);
+	border-radius: 0.36vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.35vw;
+	padding: 0 0.7vw;
+}
+
+.SalesPage_search svg {
+	width: 1.04vw;
+	height: 1.04vw;
+	flex-shrink: 0;
+}
+
+.SalesPage_searchInput {
+	flex: 1;
+	background: transparent;
+	border: none;
+	outline: none;
+	font-size: 0.73vw;
+	font-weight: 400;
+	color: var(--clr-white);
+}
+
+.SalesPage_searchInput::placeholder {
+	color: rgba(255, 255, 255, 0.4);
+}
+
+.SalesPage_tabs {
+	display: flex;
+	gap: 0.95vw;
+	margin-bottom: 0.8vw;
+	flex-wrap: wrap;
+	border-bottom: 0.052vw solid rgba(255, 255, 255, 0.1);
+	padding-bottom: 0.5vw;
+}
+
+.SalesPage_tab {
+	height: 1.6vw;
+	padding: 0.15vw 0;
+	border-radius: 0;
+	border: none;
+	background: transparent;
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 0.938vw;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	gap: 0.16vw;
+	border-bottom: 0.16vw solid transparent;
+}
+
+.SalesPage_tab:hover {
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.SalesPage_tab_active {
+	color: var(--clr-white);
+	border-bottom-color: rgba(205, 255, 255, 1);
+}
+
+.SalesPage_badge {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 1.1vw;
+	height: 0.7vw;
+	padding: 0 0.2vw;
+	background-color: rgba(64, 64, 64, 1);
+	border-radius: 0.52vw;
+	font-size: 0.938vw;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+
+.SalesPage_tableWrap {
+	width: 100%;
+	overflow-x: visible;
+	overflow-y: visible;
+	padding-bottom: 0.521vw;
+}
+
+.SalesPage_table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 720px;
+}
+
+.SalesPage_table thead {
+	border-bottom: 0.052vw solid rgba(255, 255, 255, 0.12);
+}
+
+.SalesPage_table th {
+	text-align: left;
+	font-size: 1.25vw;
+	font-weight: 400;
+	color: rgba(255, 255, 255, 0.6);
+	padding: 0.9vw 0;
+	white-space: nowrap;
+	text-transform: uppercase;
+}
+
+.SalesPage_table td {
+	padding: 0.72vw 0;
+	font-size: 0.938vw;
+	color: rgba(255, 255, 255, 0.85);
+	border-bottom: 0.052vw solid rgba(255, 255, 255, 0.12);
+	white-space: nowrap;
+	overflow: visible;
+}
+
+.SalesPage_actionsCell {
+	position: relative;
+	width: 1%;
+	white-space: nowrap;
+	text-align: right;
+}
+
+.SalesPage_titleCell {
+	width: auto;
+}
+
+.SalesPage_titleCellRow {
+	display: flex;
+	align-items: center;
+	gap: 0.6vw;
+}
+.SalesPage_titleCellRow>span{
+	font-size: 0.938vw;
+}
+
+.SalesPage_more {
+	background: transparent;
+	border: none;
+	color: rgba(255, 255, 255, 0.9);
+	cursor: pointer;
+	font-size: 0.95vw;
+	line-height: 1;
+	padding: 0.05vw 0.15vw;
+	border-radius: 0.35vw;
+}
+
+.SalesPage_more:hover {
+	background: rgba(255, 255, 255, 0.08);
+}
+
+.SalesPage_menu {
+	position: absolute;
+	top: calc(100% + 0.35vw);
+	left: 0;
+	width: 10.854vw;
+	background: #d9d9d9;
+	border-radius: 0.417vw;
+	box-shadow: 0 0.4vw 1.2vw rgba(0, 0, 0, 0.25);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	z-index: 260;
+}
+
+.SalesPage_menuItem {
+	display: block;
+	width: 100%;
+	text-align: left;
+	background: transparent;
+	border: none;
+	color: #4c4c4c;
+	padding: 0.625vw 0.833vw;
+	font-size: 0.938vw;
+	font-family: Inter, sans-serif;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.SalesPage_menuItem:hover {
+	background: rgba(0, 0, 0, 0.08);
+}
+
+.SalesPage_menuItem--danger {
+	color: rgba(120, 0, 0, 0.95);
+}
+
+.SalesPage_empty {
+	text-align: center;
+	padding: 2vw 0;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.SalesPage_idCell {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 0.55vw;
+	overflow: visible;
+	z-index: 1;
+	height: 3.125vw;
+}
+
+.SalesPage_idCell--menuOpen {
+	z-index: 260;
+}
+
+.SalesPage_metric {
+	color: rgba(255, 255, 255, 0.85);
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35vw;
+}
+
+.SalesPage_metricIcon {
+	width: 1.719vw;
+	height: 0.99vw;
+	min-width: 10px;
+	min-height: 0.521vw;
+	object-fit: contain;
+	flex-shrink: 0;
+}
+
+.SalesPage_status {
+	color: rgba(255, 255, 255, 0.7);
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35vw;
+}
+
+.SalesPage_status--active {
+	color: rgba(235, 255, 255, 0.95);
+}
+
+.SalesPage_statusIcon {
+	width: 1.458vw;
+	height: 1.094vw;
+	min-width: 12px;
+	min-height: 0.625vw;
+	object-fit: contain;
+	flex-shrink: 0;
+}
+
+.SalesPage_addButton_wrapper {
+	position: fixed;
+	bottom: 1.25vw;
+	right: 1.25vw;
+	z-index: 50;
+}
+
+.SalesPage_addButton {
+	width: 3.5vw;
+	height: 3.5vw;
+	min-width: 48px;
+	min-height: 2.5vw;
+	background: #cdffff;
+	border: none;
+	border-radius: 0.45vw;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 0.4vw 1vw rgba(0, 0, 0, 0.3);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.SalesPage_addButton:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0.6vw 1.5vw rgba(0, 0, 0, 0.4);
+}
+
+.SalesPage_addButton svg {
+	width: 1.5vw;
+	height: 1.5vw;
+	min-width: 20px;
+	min-height: 1.042vw;
+	color: #1a1a1a;
+}
+
+.SalesPage_addMenu {
+	width: 7.292vw;
+	position: absolute;
+	bottom: calc(100% + 0.8vw);
+	right: 0;
+	background: #d9d9d9;
+	border-radius: 0.35vw;
+	box-shadow: 0 0.4vw 1.2vw rgba(0, 0, 0, 0.25);
+	overflow: hidden;
+	z-index: 11;
+}
+
+.SalesPage_addMenu_item {
+	width: 100%;
+	text-align: left;
+	background: transparent;
+	border: none;
+	color: #4c4c4c;
+	padding: 0.55vw 0.8vw;
+	font-size: 0.938vw;
+	font-family: Inter, sans-serif;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.SalesPage_addMenu_item:hover {
+	background: rgba(0, 0, 0, 0.08);
+}
+
+.SalesPage_modalOverlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.45);
+	z-index: 70;
+}
+
+.SalesPage_sideModal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 22.5vw;
+	min-width: 410px;
+	background: #060606;
+	border-left: 0.052vw solid rgba(0, 162, 255, 0.85);
+	z-index: 80;
+	padding: 2.083vw;
+	overflow-y: auto;
+}
+
+.SalesPage_sideModal--wide {
+	width: 50vw;
+	min-width: 760px;
+	border-left-color: transparent;
+}
+
+.SalesPage_sideModalTitle {
+	font-size: 2.135vw;
+	line-height: 1.05;
+	font-weight: 400;
+	margin: 0 0 1.3vw;
+	color: #fff;
+}
+
+.SalesPage_formGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.8vw;
+	margin-bottom: 0.75vw;
+}
+
+.SalesPage_formGrid--upload {
+	align-items: end;
+}
+
+.SalesPage_label {
+	display: block;
+	font-size: 0.78vw;
+	margin-bottom: 0.35vw;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.SalesPage_input,
+.SalesPage_select {
+	width: 100%;
+	height: 1.9vw;
+	min-height: 1.771vw;
+	background: #2f2f2f;
+	color: #fff;
+	border: 0.052vw solid #353535;
+	border-radius: 0.22vw;
+	padding: 0 0.45vw;
+	font-size: 0.68vw;
+}
+
+.SalesPage_select {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: rgba(255, 255, 255, 0.65);
+}
+
+.SalesPage_selectWrap {
+	position: relative;
+}
+
+.SalesPage_selectTrigger {
+	width: 100%;
+	height: 1.9vw;
+	min-height: 1.771vw;
+	background: #2f2f2f;
+	color: #fff;
+	border: 0.052vw solid #353535;
+	border-radius: 0.22vw;
+	padding: 0 0.45vw;
+	font-size: 0.68vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.4vw;
+	cursor: pointer;
+}
+
+.SalesPage_selectArrow {
+	font-size: 0.78vw;
+	color: rgba(255, 255, 255, 0.7);
+	transition: transform 0.2s ease;
+}
+
+.SalesPage_selectArrow--open {
+	transform: rotate(180deg);
+}
+
+.SalesPage_selectDropdown {
+	position: absolute;
+	top: calc(100% + 0.2vw);
+	left: 0;
+	right: 0;
+	background: #d9d9d9;
+	border-radius: 0.3vw;
+	box-shadow: 0 0.4vw 1vw rgba(0, 0, 0, 0.25);
+	overflow: hidden;
+	z-index: 140;
+}
+
+.SalesPage_selectOption {
+	width: 100%;
+	border: none;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.5vw;
+	padding: 0.5vw 0.7vw;
+	font-size: 0.78vw;
+	color: #4b4b4b;
+	cursor: pointer;
+	text-align: left;
+}
+
+.SalesPage_selectOption:hover {
+	background: rgba(0, 0, 0, 0.08);
+}
+
+.SalesPage_optionCheck {
+	width: 0.72vw;
+	height: 0.72vw;
+	border: 0.052vw solid #555;
+	border-radius: 0.12vw;
+	background: transparent;
+	flex-shrink: 0;
+}
+
+.SalesPage_optionCheck--active {
+	background: #2f2f2f;
+	border-color: #2f2f2f;
+}
+
+.SalesPage_uploadBox {
+	height: 6.8vw;
+	min-height: 6.354vw;
+	background: #2a2a2a;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 0.25vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.64vw;
+	color: rgba(255, 255, 255, 0.75);
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.SalesPage_uploadBox--hasImage {
+	color: transparent;
+}
+
+.SalesPage_thumbGrid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 0.35vw;
+}
+
+.SalesPage_thumb {
+	height: 2.35vw;
+	min-height: 2.188vw;
+	background: #2e2e2e;
+	border-radius: 0.2vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 0.7vw;
+	position: relative;
+	overflow: visible;
+}
+
+.SalesPage_hiddenInput {
+	position: absolute !important;
+	width: 0 !important;
+	height: 0 !important;
+	opacity: 0 !important;
+	pointer-events: none !important;
+}
+
+.SalesPage_thumbPlaceholder {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.SalesPage_thumbImg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: inherit;
+}
+
+.SalesPage_thumbDots {
+	position: absolute;
+	right: 0.25vw;
+	bottom: 0.15vw;
+	border: none;
+	background: transparent;
+	color: #fff;
+	font-size: 0.7vw;
+	cursor: pointer;
+}
+
+.SalesPage_thumbMenu {
+	position: absolute;
+	top: calc(100% + 0.2vw);
+	left: 50%;
+	transform: translateX(-50%);
+	background: #d9d9d9;
+	border-radius: 0.3vw;
+	box-shadow: 0 0.4vw 1vw rgba(0, 0, 0, 0.25);
+	overflow: hidden;
+	z-index: 120;
+	min-width: 8.8vw;
+}
+
+.SalesPage_thumbMenu button {
+	display: block;
+	width: 100%;
+	border: none;
+	background: transparent;
+	text-align: left;
+	padding: 0.5vw 0.7vw;
+	font-size: 0.72vw;
+	color: #4b4b4b;
+	cursor: pointer;
+}
+
+.SalesPage_thumbMenu button:hover {
+	background: rgba(0, 0, 0, 0.08);
+}
+
+.SalesPage_lineItem {
+	height: 2.2vw;
+	min-height: 1.979vw;
+	background: #2f2f2f;
+	border-radius: 0.2vw;
+	padding: 0 0.45vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	color: rgba(255, 255, 255, 0.82);
+	font-size: 0.8vw;
+	margin-bottom: 0.35vw;
+	position: relative;
+}
+
+.SalesPage_lineText {
+	flex: 1;
+	min-width: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.SalesPage_lineItem span {
+	color: rgba(255, 255, 255, 0.6);
+	display: flex;
+	align-items: center;
+	gap: 0.2vw;
+}
+
+.SalesPage_inlineInput {
+	width: 100%;
+	background: #2f2f2f;
+	border: 0.052vw solid rgba(255, 255, 255, 0.25);
+	border-radius: 0.313vw;
+	color: #fff;
+	height: 100%;
+	padding: 0 0.521vw;
+	font-size: inherit;
+	outline: none;
+}
+
+.SalesPage_lineDots {
+	background: transparent;
+	color: rgba(255, 255, 255, 0.7);
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	font-size: 0.78vw;
+}
+
+.SalesPage_inlineActions {
+	display: flex;
+	align-items: center;
+	gap: 0.25vw;
+}
+
+.SalesPage_inlineActionBtn {
+	width: 1.15vw;
+	height: 1.15vw;
+	min-width: 16px;
+	min-height: 0.833vw;
+	border: none;
+	background: transparent;
+	padding: 0;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.SalesPage_inlineActionBtn img {
+	width: 0.677vw;
+	height: 0.677vw;
+	object-fit: contain;
+}
+
+.SalesPage_lineMenu {
+	position: absolute;
+	right: 2.4vw;
+	top: 2.3vw;
+	background: #d9d9d9;
+	border-radius: 0.3vw;
+	overflow: hidden;
+	box-shadow: 0 0.4vw 1vw rgba(0, 0, 0, 0.25);
+	z-index: 10;
+}
+
+.SalesPage_lineMenu button {
+	display: block;
+	width: 100%;
+	border: none;
+	background: transparent;
+	text-align: left;
+	padding: 0.62vw 0.8vw;
+	font-size: 0.78vw;
+	color: #4b4b4b;
+	cursor: pointer;
+}
+
+.SalesPage_lineMenu button:hover {
+	background: rgba(0, 0, 0, 0.08);
+}
+
+.SalesPage_linkBtn {
+	background: none;
+	border: none;
+	color: #fff;
+	text-decoration: underline;
+	font-size: 0.76vw;
+	padding: 0;
+	margin-top: 0.2vw;
+	cursor: pointer;
+}
+
+.SalesPage_modalFooter {
+	display: flex;
+	gap: 0.65vw;
+	margin-top: auto;
+	position: static;
+	padding-top: 0.625vw;
+	background: transparent;
+	z-index: auto;
+	flex-direction: column;
+}
+
+.SalesPage_btnPrimary,
+.SalesPage_btnGhost {
+	flex: 1;
+	height: 2.2vw;
+	min-height: 1.771vw;
+	border-radius: 0.25vw;
+	font-size: 0.74vw;
+	cursor: pointer;
+}
+
+.SalesPage_btnPrimary {
+	border: none;
+	background: #cdffff;
+	color: #101010;
+}
+
+.SalesPage_btnGhost {
+	border: 0.052vw solid rgba(255, 255, 255, 0.65);
+	background: transparent;
+	color: #fff;
+}
+
+@media (max-width: 768px) {
+	.SalesPage_card {
+		border-radius: 0.521vw;
+		padding: 0.833vw;
+	}
+	.SalesPage_title {
+		font-size: 1.25vw;
+	}
+	.SalesPage_search {
+		height: 2.292vw;
+		border-radius: 0.417vw;
+		padding: 0 0.625vw;
+	}
+	.SalesPage_search svg {
+		width: 0.938vw;
+		height: 0.938vw;
+	}
+	.SalesPage_searchInput {
+		font-size: 0.729vw;
+	}
+	.SalesPage_tab {
+		height: auto;
+		font-size: 0.729vw;
+		padding: 0.521vw 0;
+	}
+	.SalesPage_menu {
+		width: 11.458vw;
+	}
+	.SalesPage_addMenu {
+		width: 11.458vw;
+	}
+	.SalesPage_sideModal,
+	.SalesPage_sideModal--wide {
+		width: 100vw;
+		min-width: 0;
+		padding: 0.833vw;
+	}
+	.SalesPage_sideModalTitle {
+		font-size: 1.25vw;
+		margin-bottom: 0.729vw;
+	}
+	.SalesPage_lineDots {
+		font-size: 0.625vw;
+	}
+	.SalesPage_lineMenu {
+		right: 2.083vw;
+		top: 2.083vw;
+		border-radius: 0.313vw;
+	}
+	.SalesPage_lineMenu button {
+		padding: 0.417vw 0.521vw;
+		font-size: 0.625vw;
+	}
+	.SalesPage_formGrid {
+		grid-template-columns: 1fr;
+		gap: 0.521vw;
+		margin-bottom: 0.521vw;
+	}
+	.SalesPage_label {
+		font-size: 0.625vw;
+		margin-bottom: 0.313vw;
+	}
+	.SalesPage_titleCellRow>span{
+		font-size: 3.889vw;
+	}
+	.SalesPage_input,
+	.SalesPage_select,
+	.SalesPage_lineItem {
+		height: 1.875vw;
+		padding: 0 0.521vw;
+		font-size: 0.625vw;
+		border-radius: 0.365vw;
+	}
+	.SalesPage_uploadBox {
+		height: 5.208vw;
+		font-size: 0.573vw;
+		border-radius: 0.365vw;
+	}
+	.SalesPage_thumbGrid {
+		gap: 0.313vw;
+	}
+	.SalesPage_thumb {
+		height: 1.875vw;
+		font-size: 0.625vw;
+		border-radius: 0.365vw;
+	}
+	.SalesPage_linkBtn {
+		font-size: 0.625vw;
+	}
+	.SalesPage_modalFooter {
+		flex-direction: column;
+		gap: 0.417vw;
+		margin-top: 0.833vw;
+	}
+	.SalesPage_btnPrimary,
+	.SalesPage_btnGhost {
+		height: 2.188vw;
+		font-size: 0.625vw;
+		border-radius: 0.365vw;
+	}
+}
+
+@media (max-width: 767px) {
+	.SalesPage_card { border-radius: 12px; padding: 10px; }
+	.SalesPage_title { font-size: 3.889vw; line-height: 1.1; }
+	.SalesPage_controls { margin-bottom: 10px; }
+	.SalesPage_search { height: 34px; border-radius: 6px; padding: 0 10px; }
+	.SalesPage_searchInput { font-size: 3.889vw; }
+	.SalesPage_search svg { width: 16px; height: 16px; }
+	.SalesPage_tabs {
+		gap: 12px;
+		margin-bottom: 8px;
+		padding-bottom: 8px;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+	}
+	.SalesPage_tab { font-size: 3.889vw; white-space: nowrap; height: auto; }
+	.SalesPage_badge { display: none; }
+	.SalesPage_tableWrap { padding-bottom: 56px; }
+	.SalesPage_table { min-width: 0; }
+	.SalesPage_table thead { display: none; }
+	.SalesPage_table tbody tr {
+		display: grid;
+		grid-template-columns: minmax(0, 1.55fr) 22px minmax(0, 1fr);
+		grid-template-areas:
+			"name icon1 val1"
+			"cat  icon2 val2"
+			"id   icon3 val3"
+			"menu icon4 val4";
+		align-items: center;
+		column-gap: 8px;
+		row-gap: 6px;
+		padding: 10px 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+	}
+	.SalesPage_table td { border-bottom: none; padding: 0; font-size: 3.889vw; }
+	.SalesPage_table td:nth-child(1) { grid-area: name; font-size: 3.889vw; line-height: 1.1; }
+	.SalesPage_table td:nth-child(3) { grid-area: cat; font-size: 3.889vw; line-height: 1.1; color: rgba(255,255,255,.9); }
+	.SalesPage_table td:nth-child(2) {
+		grid-area: id;
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		gap: 0;
+		height: auto;
+	}
+	.SalesPage_table td:nth-child(2) > span { font-size: 3.889vw; line-height: 1.1; white-space: nowrap; }
+	.SalesPage_table td:nth-child(4) { grid-area: val1; justify-self: end; }
+	.SalesPage_table td:nth-child(6) { grid-area: val2; justify-self: end; }
+	.SalesPage_table td:nth-child(5) { grid-area: val3; justify-self: end; }
+	.SalesPage_table td:nth-child(7) { grid-area: val4; justify-self: end; }
+	.SalesPage_table td:nth-child(8) { grid-area: menu; justify-self: start; }
+	.SalesPage_table td:nth-child(4),
+	.SalesPage_table td:nth-child(5),
+	.SalesPage_table td:nth-child(6),
+	.SalesPage_table td:nth-child(7) {
+		white-space: nowrap;
+	}
+	.SalesPage_table td:nth-child(4),
+	.SalesPage_table td:nth-child(5),
+	.SalesPage_table td:nth-child(6),
+	.SalesPage_table td:nth-child(7) {
+		position: relative;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding-left: 26px;
+	}
+	.SalesPage_table td:nth-child(4) .SalesPage_metric,
+	.SalesPage_table td:nth-child(6) .SalesPage_metric,
+	.SalesPage_table td:nth-child(5),
+	.SalesPage_table td:nth-child(7) .SalesPage_status {
+		font-size: 3.889vw;
+		line-height: 1.1;
+	}
+	.SalesPage_table td:nth-child(4)::before,
+	.SalesPage_table td:nth-child(5)::before,
+	.SalesPage_table td:nth-child(6)::before,
+	.SalesPage_table td:nth-child(7)::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 16px;
+		height: 16px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		opacity: 0.9;
+	}
+	.SalesPage_table td:nth-child(4)::before {
+		background-image: url('../../assets/icons/eyeIcon.svg');
+	}
+	.SalesPage_table td:nth-child(6)::before {
+		background-image: url('../../assets/icons/lest.svg');
+	}
+	.SalesPage_table td:nth-child(5)::before {
+		content: '₽';
+		background-image: none;
+		color: rgba(255, 255, 255, 0.9);
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1;
+		width: auto;
+		height: auto;
+	}
+	.SalesPage_table td:nth-child(7)::before {
+		background-image: url('../../assets/icons/status_no.png');
+	}
+	.SalesPage_table td:nth-child(7):has(.SalesPage_status--active)::before {
+		background-image: url('../../assets/icons/status_active.png');
+	}
+	.SalesPage_table td:nth-child(4) .SalesPage_metricIcon,
+	.SalesPage_table td:nth-child(6) .SalesPage_metricIcon,
+	.SalesPage_table td:nth-child(7) .SalesPage_statusIcon {
+		display: none;
+	}
+	.SalesPage_table td:nth-child(4) .SalesPage_metric,
+	.SalesPage_table td:nth-child(6) .SalesPage_metric,
+	.SalesPage_table td:nth-child(7) .SalesPage_status {
+		gap: 0;
+	}
+	.SalesPage_table td:nth-child(8) {
+		display: flex;
+		align-items: center;
+		padding-left: 0;
+		position: relative;
+	}
+	.SalesPage_table td:nth-child(8) .SalesPage_more {
+		font-size: 3.889vw;
+		line-height: 1;
+		padding: 0;
+	}
+	.SalesPage_table td:nth-child(8) .SalesPage_menu {
+		left: 0;
+		top: calc(100% + 4px);
+	}
+	.SalesPage_menu { top: calc(100% + 4px); width: 150px; border-radius: 6px; }
+	.SalesPage_menuItem { padding: 8px 10px; font-size: 3.889vw; }
+	.SalesPage_addButton_wrapper { bottom: 12px; right: 12px; }
+	.SalesPage_addButton { width: 38px; height: 38px; min-width: 0; min-height: 0; border-radius: 6px; }
+	.SalesPage_addButton svg { width: 18px; height: 18px; min-width: 0; min-height: 0; }
+	.SalesPage_addMenu { width: 140px; bottom: calc(100% + 8px); border-radius: 6px; }
+	.SalesPage_addMenu_item { padding: 8px 10px; font-size: 3.889vw; }
+
+	
+	.SalesPage_sideModal,
+	.SalesPage_sideModal--wide {
+		width: 100vw;
+		min-width: 0;
+		padding: 14px 12px 12px;
+	}
+	.SalesPage_sideModalTitle {
+		font-size: 24px;
+		line-height: 1.05;
+		margin-bottom: 12px;
+	}
+	.SalesPage_formGrid {
+		grid-template-columns: 1fr;
+		gap: 10px;
+		margin-bottom: 10px;
+	}
+	.SalesPage_label {
+		font-size: 14px;
+		margin-bottom: 6px;
+	}
+	.SalesPage_input,
+	.SalesPage_select,
+	.SalesPage_lineItem {
+		height: 44px;
+		min-height: 44px;
+		padding: 0 12px;
+		font-size: 14px;
+		border-radius: 8px;
+	}
+	.SalesPage_uploadBox {
+		height: 124px;
+		min-height: 124px;
+		font-size: 13px;
+		border-radius: 8px;
+	}
+	.SalesPage_thumbGrid {
+		gap: 8px;
+	}
+	.SalesPage_thumb {
+		height: 52px;
+		min-height: 52px;
+		font-size: 14px;
+		border-radius: 8px;
+	}
+	.SalesPage_thumbDots {
+		right: 8px;
+		bottom: 6px;
+		font-size: 14px;
+	}
+	.SalesPage_thumbMenu {
+		top: calc(100% + 6px);
+		border-radius: 8px;
+		min-width: 170px;
+	}
+	.SalesPage_thumbMenu button {
+		padding: 10px 12px;
+		font-size: 14px;
+	}
+	.SalesPage_lineItem {
+		margin-bottom: 8px;
+	}
+	.SalesPage_lineDots {
+		font-size: 14px;
+	}
+	.SalesPage_linkBtn {
+		font-size: 14px;
+		margin-top: 4px;
+	}
+	.SalesPage_selectTrigger {
+		height: 44px;
+		min-height: 44px;
+		padding: 0 12px;
+		font-size: 14px;
+		border-radius: 8px;
+	}
+	.SalesPage_selectArrow {
+		font-size: 14px;
+	}
+	.SalesPage_selectDropdown {
+		top: calc(100% + 6px);
+		border-radius: 8px;
+	}
+	.SalesPage_selectOption {
+		padding: 10px 12px;
+		font-size: 14px;
+	}
+	.SalesPage_optionCheck {
+		width: 14px;
+		height: 14px;
+		border-width: 1px;
+		border-radius: 3px;
+	}
+	.SalesPage_lineMenu {
+		right: 8px;
+		top: calc(100% + 4px);
+		border-radius: 8px;
+	}
+	.SalesPage_lineMenu button {
+		padding: 10px 12px;
+		font-size: 14px;
+	}
+	.SalesPage_modalFooter {
+		flex-direction: column;
+		gap: 8px;
+		margin-top: 12px;
+		padding-top: 10px;
+		padding-bottom: 0;
+		background: transparent;
+	}
+	.SalesPage_btnPrimary,
+	.SalesPage_btnGhost {
+		height: 44px;
+		min-height: 44px;
+		font-size: 14px;
+		border-radius: 8px;
+	}
+}
+

@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+@import './assets/fonts/fonts.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+:root {
+  --page-gutter: 32px;
+  --content-max-width: 1720px;
+  --color-putty: #0b0d0f;
+  --color-ink: #f4efe6;
+  --color-bone: #12161a;
+  --color-chalk: #101418;
+  --color-vellum: rgba(244, 239, 230, 0.12);
+  --color-graphite: #a49c90;
+  --color-ash: #7d766d;
+  --color-paper: #f7f3eb;
+  --color-accent: #b88a4a;
+  --color-accent-soft: rgba(184, 138, 74, 0.18);
+  --color-surface: #13181d;
+  --color-surface-strong: #171d23;
+  --color-border-strong: rgba(244, 239, 230, 0.18);
+  --color-shadow: rgba(0, 0, 0, 0.32);
+
+  --font-davinci: 'Cormorant Garamond', 'Hikasami', Georgia, serif;
+  --font-helvetica-now: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --text-body-sm: 15px;
+  --leading-body-sm: 1.5;
+  --text-subheading: 22px;
+  --leading-subheading: 1.33;
+  --text-heading-sm: 26px;
+  --leading-heading-sm: 1.2;
+  --text-heading: 43px;
+  --leading-heading: 1.04;
+  --text-heading-lg: 52px;
+  --leading-heading-lg: 0.98;
+  --text-display: clamp(6rem, 24vw, 18rem);
+  --leading-display: 0.84;
+
+  --spacing-4: 4px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-28: 28px;
+  --spacing-32: 32px;
+  --spacing-36: 36px;
+  --spacing-40: 40px;
+  --spacing-52: 52px;
+  --spacing-60: 60px;
+  --spacing-96: 96px;
+  --spacing-168: 168px;
+
+  --section-gap: 80px;
+  --card-padding: 24px;
+  --element-gap: 6px;
+
+  --radius-sm: 2px;
+  --radius-lg: 9px;
+  --radius-pill: 28.8px;
+
+  --surface-putty-canvas: var(--color-putty);
+  --surface-bone-card: var(--color-bone);
+  --surface-chalk-footer: var(--color-chalk);
+  --surface-ink-room: #050608;
+
+  
+  --clr-bg: var(--color-putty);
+  --clr-white: var(--color-paper);
+  --clr-black: var(--color-bone);
+  --clr-accent-blue: var(--color-bone);
+  --clr-grey-light: var(--color-vellum);
+  --clr-text-secondary: rgba(244, 239, 230, 0.62);
+
+  --gap-base: 1.04vw;
+  --gap-medium: 2.08vw;
+  --gap-large: 4.16vw;
+  --gap-20: 1.0417vw;
+  --gap-40: 2.0833vw;
+  --gap-60: 3.125vw;
+  --gap-80: 4.1667vw;
+  --gap-150: 7.8125vw;
+
+  --fs-120: 6.25vw;
+  --fs-100: 5.2083vw;
+  --fs-60: 3.125vw;
+  --fs-50: 2.6042vw;
+  --fs-40: 2.0833vw;
+  --fs-33: 1.7188vw;
+  --fs-30: 1.5625vw;
+  --fs-25: 1.3021vw;
+  --fs-22: 1.1458vw;
+  --fs-20: 1.0417vw;
+  --fs-18: 0.9375vw;
+  --fs-16: 0.8333vw;
+  --fs-14: 0.7292vw;
+}
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: auto;
+  background: var(--color-putty);
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: auto;
+  background: var(--color-putty);
+  color: var(--color-ink);
+  font-family: var(--font-helvetica-now);
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-body-sm);
+}
+
+a {
+  color: inherit;
+}
+
+img,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+main,
+main > *,
+section,
+.container {
+  min-width: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+li {
+  overflow-wrap: anywhere;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.container {
+  width: min(var(--content-max-width), calc(100vw - (var(--page-gutter) * 2)));
+  margin: 0 auto;
+  padding-inline: 0 !important;
+}
+
+.section-dark {
+  background-color: var(--surface-ink-room);
+  color: var(--color-paper);
+}
+
+.section-light {
+  background-color: var(--color-putty);
+}
+
+.section {
+  background-color: var(--color-putty);
+  margin-bottom: 2.08vw;
+}
+
+@keyframes adaptive-section-reveal {
+  from {
+    opacity: 0.38;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    main section:not(.TeaStory_section) {
+      animation: adaptive-section-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 24%;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--gap-base);
+  row-gap: var(--gap-40);
+}
+
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+section {
+  width: 100%;
+  margin: 0;
+}
+
+a,
+button {
+  transition:
+    color 0.28s ease,
+    background-color 0.28s ease,
+    border-color 0.28s ease,
+    opacity 0.28s ease,
+    transform 0.28s ease,
+    box-shadow 0.28s ease;
+}
+
+::selection {
+  background: rgba(184, 138, 74, 0.28);
+  color: var(--color-paper);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --page-gutter: 24px;
+    --gap-base: 15px;
+    --gap-medium: 30px;
+    --gap-large: 60px;
+    --gap-20: 15px;
+    --gap-40: 30px;
+    --gap-60: 40px;
+    --gap-80: 60px;
+    --gap-150: 100px;
+
+    --fs-120: 80px;
+    --fs-100: 70px;
+    --fs-60: 40px;
+    --fs-50: 36px;
+    --fs-40: 30px;
+    --fs-33: 33px;
+    --fs-30: 28px;
+    --fs-25: 24px;
+    --fs-22: 22px;
+    --fs-20: 20px;
+    --fs-18: 18px;
+    --fs-16: 16px;
+    --fs-14: 14px;
+  }
+
+  .container {
+    width: min(var(--content-max-width), calc(100vw - (var(--page-gutter) * 2)));
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --page-gutter: 16px;
+    --gap-base: 12px;
+    --gap-medium: 20px;
+    --gap-large: 40px;
+    --gap-20: 12px;
+    --gap-40: 20px;
+    --gap-60: 30px;
+    --gap-80: 40px;
+    --gap-150: 60px;
+
+    --fs-120: 50px;
+    --fs-100: 44px;
+    --fs-60: 32px;
+    --fs-50: 28px;
+    --fs-40: 24px;
+    --fs-33: 26px;
+    --fs-30: 22px;
+    --fs-25: 20px;
+    --fs-22: 18px;
+    --fs-20: 16px;
+    --fs-18: 16px;
+    --fs-16: 14px;
+    --fs-14: 13px;
+  }
+
+  .container {
+    width: min(var(--content-max-width), calc(100vw - (var(--page-gutter) * 2)));
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

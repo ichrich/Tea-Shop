@@ -1,0 +1,595 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.pop_overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgb(255 255 255 / 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pop_modal {
+    position: relative;
+    display: flex;
+    width: 62.5vw;
+    max-width: 100%;
+    max-height: 90vh;
+    background: rgba(0, 0, 0, 1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.pop_close {
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+.pop_close svg { width: 30px; height: 30px; opacity: 0.8; }
+
+.pop_left {
+    flex: 1;
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.pop_breadcrumbs {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9vw;
+    margin-bottom: 2vw;
+}
+
+.pop_photo_container {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.pop_main_img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.pop_right {
+    flex: 1;
+    padding: 5.4vw 2vw 2vw 0 ;
+    overflow-y: auto;
+}
+
+.pop_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.pop_name {
+    font-size: 2.1vw;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    max-width: 60%;
+}
+
+.pop_price {
+    font-size: 2.1vw;
+    font-weight: 700;
+    color: #fff;
+}
+
+.pop_desc {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.pop_stock {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.pop_purchase_row {
+    display: flex;
+    gap: 0.8vw;
+    margin-bottom: 15px;
+}
+
+.pop_qty_selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 0 25px;
+    height: 2.9vw;
+    width: 50%;
+}
+
+.pop_qty_selector button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 10px;
+    position: relative;
+}
+
+.minus::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    transform: translate(-50%, -50%);
+}
+
+.plus::before,
+.plus::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 2px;
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
+.plus::after {
+    transform: rotate(90deg);
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.pop_qty_selector span {
+    color: #fff;
+    min-width: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.pop_btn_buy {
+    flex: 1;
+    height: 2.9vw;
+    font-size: 1.2vw;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 400;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.pop_btn_cart {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0.7vw 1.3vw;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 2vw;
+    transition: background 0.3s;
+}
+
+
+.pop_btn_total {
+    font-size: 18px;
+}
+
+.pop_section {
+    margin-top: 3.1vw;
+    width: 100%;
+}
+
+.pop_section_title {
+    font-size: 1.56vw;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.pop_spec_item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2vw 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pop_spec_label {
+    font-size: 1.1vw;
+    color: rgba(255, 255, 255, 0.4);
+}
+.pop_spec_value {
+    color: #fff;
+    text-align: right;
+    font-size: 1.1vw;
+    width: 18.2vw;
+}
+
+.pop_cert_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pop_cert_name {
+    color: #fff;
+    font-size: 1.1vw;
+}
+.pop_cert_actions { display: flex; align-items: center; gap: 20px; }
+.pop_download_btn {
+    background: none;
+    border: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size:1.1vw;
+    font-weight: 600;
+    line-height: 110%;
+
+}
+.pop_cert_size {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.9vw;
+}
+
+.pop_delivery_sub {
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 1vw;
+}
+
+.pop_delivery_logos {
+    display: flex;
+    gap: 12px;
+}
+
+.pop_delivery_card {
+    flex: 1;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop_delivery_card img {
+    max-width: 70%;
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
+}
+
+.pop_right::-webkit-scrollbar { width: 0; }
+
+.pop_btn_cart span{
+    font-weight: 400;
+    line-height: 110%;
+    font-size: 1.2vw;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .pop_modal {
+        flex-direction: column;
+        width: 95vw;
+        max-height: 95vh;
+        overflow-y: auto;
+        padding: 3.1vw;
+        background: #1F1F1F;
+    }
+
+    .pop_breadcrumbs {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .pop_close {
+        top: 24px;
+        right: 24px;
+    }
+
+    .pop_left {
+        width: 100%;
+        padding: 0;
+        background: transparent;
+        margin-bottom: 40px;
+        display: flex;
+    }
+
+    .pop_photo_container {
+        flex: 1;
+        background: #1F1F1F;
+        border-radius: 15px;
+        padding: 0;
+    }
+
+    .pop_main_img {
+        max-height: 400px;
+        margin: 0 auto;
+    }
+
+    .pop_right {
+        width: 100%;
+        padding: 0;
+        overflow: visible;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+        background: #1F1F1F;
+    }
+
+    .pop_head {
+        grid-column: span 2;
+        margin-bottom: 30px;
+    }
+
+    .pop_name {
+        font-size: 3.9vw;
+        max-width: 100%;
+    }
+
+    .pop_price {
+        font-size: 3.9vw;
+    }
+
+    .pop_desc {
+        grid-column: 1;
+        font-size: 2.6vw;
+    }
+
+    .pop_stock {
+        grid-column: 2;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .pop_purchase_row {
+        grid-column: 2;
+        flex-direction: column;
+        gap: 12px;
+        height: 14vw;
+    }
+
+    .pop_qty_selector {
+        width: 100%;
+        height: 6.5vw;
+    }
+
+    .pop_btn_buy {
+        width: 100%;
+        height: 6.5vw;
+        font-size: 2.6vw;
+    }
+
+    .pop_btn_cart {
+        grid-column: 2;
+        width: 100%;
+        height: 6.5vw;
+        margin-bottom: 0;
+    }
+
+    .pop_section {
+        grid-column: span 2;
+        margin-top: 6.5vw;
+    }
+
+    .pop_section_title {
+        font-size: 3.9vw;
+        margin-bottom: 3.9vw;
+    }
+
+    .pop_spec_item {
+        padding-top:0.6vw ;
+        padding-bottom: 3.5vw;
+        align-items: start;
+    }
+    .pop_cert_size{
+        font-size: 2.08vw;
+    }
+    .pop_cert_item{
+        padding-top:0.6vw ;
+        padding-bottom:0.6vw ;
+    }
+
+    .pop_spec_label, .pop_spec_value, .pop_cert_name, .pop_download_btn {
+        font-size: 2.6vw;
+    }
+
+    .pop_spec_value {
+        width: 45.9vw;
+    }
+
+    .pop_delivery_sub {
+        float: right;
+        margin-top: -45px;
+        font-size: 16px;
+        max-width: 50%;
+        text-align: right;
+    }
+
+    .pop_delivery_logos {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .pop_delivery_card {
+        height: 11.45vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .pop_modal {
+        flex-direction: column;
+        width: 90vw;
+        max-height: 95vh;
+        overflow-y: auto;
+        border-radius: 10px;
+    }
+
+    .pop_close {
+        top: 20px;
+        right: 20px;
+    }
+    .pop_close svg {
+        width: 40px;
+        height: 40px;
+    }
+    .pop_stock{
+        font-size: 4.4vw;
+    }
+
+    .pop_left {
+        width: 100%;
+        padding:  5.5vw;
+        background: transparent;
+    }
+
+    .pop_breadcrumbs {
+        font-size: 3.8vw;
+        margin: 5.5vw 0;
+    }
+
+    .pop_photo_container {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .pop_main_img {
+        max-height: 400px;
+        width: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .pop_right {
+        width: 100%;
+        padding: 0 5.5vw 5.5vw 5.5vw;
+        overflow-y: visible;
+        background: transparent;
+    }
+
+    .pop_head {
+        flex-direction: row;
+        align-items: flex-start;
+        gap:5.5vw;
+        margin-bottom: 5.5vw;
+    }
+
+    .pop_name {
+        font-size: 6.1vw;
+        max-width: 70%;
+    }
+
+    .pop_price {
+        font-size: 6.1vw;
+    }
+
+    .pop_desc {
+        font-size: 4.4vw;
+        margin-bottom: 5.5vw;
+    }
+
+    .pop_purchase_row {
+        flex-direction: column;
+        gap:2.7vw;
+        height: 21.6vw;
+    }
+
+    .pop_qty_selector {
+        width: 100%;
+        height: 9.4vw;
+    }
+
+    .pop_btn_buy, .pop_btn_cart {
+        width: 100%;
+        height: 9.4vw;
+        font-size: 4.4vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .pop_btn_cart span
+    {
+        font-size: 4.4vw;
+    }
+
+    .pop_section_title {
+        font-size:6.1vw;
+        margin-top: 11.1vw;
+    }
+
+    .pop_spec_label, .pop_spec_value {
+        font-size: 4.4vw;
+        text-align: start;
+    }
+
+    .pop_spec_value {
+        width: auto;
+    }
+
+    .pop_cert_name, .pop_download_btn {
+        font-size: 4.4vw;
+        font-weight: 400;
+    }
+
+    .pop_delivery_logos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.7vw;
+    }
+
+    .pop_delivery_card:last-child {
+        grid-column: span 2;
+    }
+
+    .pop_delivery_card {
+        height: 15.2vw;
+    }
+    .pop_btn_total{
+        display: none;
+    }
+    .pop_delivery_sub{
+        margin-bottom: 2.7vw;
+    }
+    .pop_cert_size{
+        font-size: 3.6vw;
+    }
+    .pop_cert_item{
+        display: block;
+    }
+    .pop_spec_item{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+    }
+}

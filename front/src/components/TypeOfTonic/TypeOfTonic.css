@@ -1,0 +1,585 @@
+.TeaCatalog {
+  padding: clamp(28px, 4vw, 72px) 0 clamp(56px, 6vw, 96px);
+}
+
+.TeaCatalog_intro {
+  display: grid;
+  gap: 20px;
+}
+
+.TeaCatalog_hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.72fr);
+  gap: 20px;
+  padding: clamp(24px, 3vw, 40px);
+  border: 1px solid rgba(247, 243, 235, 0.12);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at top right, rgba(111, 140, 114, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(11, 15, 13, 0.98), rgba(8, 11, 10, 0.98));
+  box-shadow: 0 28px 64px rgba(0, 0, 0, 0.24);
+}
+
+.TeaCatalog_heroCopy {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.TeaCatalog_eyebrow {
+  color: rgba(190, 217, 181, 0.78);
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.TeaCatalog_title {
+  margin: 0;
+  max-width: 15ch;
+  color: var(--color-paper);
+  font-family: var(--font-davinci);
+  font-size: clamp(44px, 5.2vw, 88px);
+  line-height: 0.92;
+  font-weight: 500;
+}
+
+.TeaCatalog_lead {
+  margin: 0;
+  max-width: 40rem;
+  color: rgba(247, 243, 235, 0.68);
+  font-size: clamp(16px, 1.08vw, 20px);
+  line-height: 1.6;
+}
+
+.TeaCatalog_stats {
+  display: grid;
+  gap: 14px;
+  align-content: end;
+}
+
+.TeaCatalog_stats > div {
+  display: grid;
+  gap: 8px;
+  padding: 18px 18px 20px;
+  border: 1px solid rgba(247, 243, 235, 0.1);
+  border-radius: 8px;
+  background: rgba(247, 243, 235, 0.04);
+}
+
+.TeaCatalog_stats span {
+  color: rgba(247, 243, 235, 0.48);
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.TeaCatalog_stats strong {
+  color: var(--color-paper);
+  font-size: clamp(18px, 1.2vw, 24px);
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+.TeaCatalog_toolbar {
+  position: sticky;
+  top: 92px;
+  z-index: 12;
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid rgba(247, 243, 235, 0.1);
+  border-radius: 8px;
+  background: rgba(10, 14, 12, 0.9);
+  backdrop-filter: blur(18px);
+}
+
+.TeaCatalog_search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 0 16px;
+  border: 1px solid rgba(247, 243, 235, 0.12);
+  border-radius: 999px;
+  background: rgba(247, 243, 235, 0.03);
+}
+
+.TeaCatalog_search img {
+  width: 16px;
+  height: 16px;
+  opacity: 0.56;
+}
+
+.TeaCatalog_search input {
+  width: 100%;
+  min-width: 0;
+  height: 50px;
+  border: 0;
+  outline: 0;
+  color: var(--color-paper);
+  background: transparent;
+  font: inherit;
+}
+
+.TeaCatalog_search input::placeholder {
+  color: rgba(247, 243, 235, 0.44);
+}
+
+.TeaCatalog_controls {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+}
+
+.TeaCatalog_dropdown {
+  position: relative;
+}
+
+.TeaCatalog_trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 210px;
+  height: 52px;
+  padding: 0 18px;
+  border: 1px solid rgba(247, 243, 235, 0.12);
+  border-radius: 999px;
+  background: rgba(247, 243, 235, 0.03);
+  color: var(--color-paper);
+  cursor: pointer;
+  font: inherit;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.TeaCatalog_trigger:hover,
+.TeaCatalog_trigger.is-open {
+  background: rgba(247, 243, 235, 0.06);
+  border-color: rgba(247, 243, 235, 0.24);
+}
+
+.TeaCatalog_trigger img {
+  width: 13px;
+  height: 8px;
+  transition: transform 0.2s ease;
+}
+
+.TeaCatalog_trigger.is-open img {
+  transform: rotate(180deg);
+}
+
+.TeaCatalog_menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  min-width: 240px;
+  border: 1px solid rgba(247, 243, 235, 0.12);
+  border-radius: 8px;
+  background: rgba(9, 12, 11, 0.98);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.28);
+}
+
+.TeaCatalog_menu--sort {
+  display: grid;
+  padding: 8px;
+}
+
+.TeaCatalog_option {
+  padding: 12px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: rgba(247, 243, 235, 0.7);
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.TeaCatalog_option:hover,
+.TeaCatalog_option.is-active {
+  color: var(--color-paper);
+  background: rgba(247, 243, 235, 0.08);
+}
+
+.TeaCatalog_menu--filters {
+  width: min(420px, calc(100vw - 32px));
+  padding: 20px;
+  display: grid;
+  gap: 18px;
+}
+
+.TeaCatalog_filterSection {
+  display: grid;
+  gap: 14px;
+}
+
+.TeaCatalog_filterSection h2 {
+  margin: 0;
+  color: var(--color-paper);
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.TeaCatalog_checkList {
+  display: grid;
+  gap: 10px;
+}
+
+.TeaCatalog_checkRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(247, 243, 235, 0.78);
+  cursor: pointer;
+}
+
+.TeaCatalog_checkRow input {
+  width: 16px;
+  height: 16px;
+  accent-color: #88a78c;
+}
+
+.TeaCatalog_priceBlock {
+  display: grid;
+  gap: 14px;
+}
+
+.TeaCatalog_priceInputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.TeaCatalog_priceField {
+  display: grid;
+  gap: 8px;
+}
+
+.TeaCatalog_priceField span {
+  color: rgba(247, 243, 235, 0.54);
+  font-size: 13px;
+}
+
+.TeaCatalog_priceInput {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid rgba(247, 243, 235, 0.14);
+  border-radius: 8px;
+  background: rgba(247, 243, 235, 0.04);
+  color: var(--color-paper);
+  font: inherit;
+}
+
+.TeaCatalog_sliderWrap {
+  display: grid;
+  gap: 10px;
+}
+
+.TeaCatalog_sliderTrack {
+  position: relative;
+  height: 16px;
+}
+
+.TeaCatalog_sliderTrack::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(247, 243, 235, 0.18);
+  transform: translateY(-50%);
+}
+
+.TeaCatalog_sliderFill {
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(190, 217, 181, 0.9);
+  transform: translateY(-50%);
+}
+
+.TeaCatalog_range {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  margin: 0;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.TeaCatalog_range::-webkit-slider-runnable-track {
+  background: transparent;
+}
+
+.TeaCatalog_range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  margin-top: 1px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-paper);
+  cursor: pointer;
+}
+
+.TeaCatalog_range::-moz-range-track {
+  background: transparent;
+}
+
+.TeaCatalog_range::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-paper);
+  cursor: pointer;
+}
+
+.TeaCatalog_sliderLabels {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: rgba(247, 243, 235, 0.44);
+  font-size: 12px;
+}
+
+.TeaCatalog_filterFooter {
+  display: flex;
+  gap: 12px;
+}
+
+.TeaCatalog_reset,
+.TeaCatalog_apply,
+.TeaCatalog_tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.TeaCatalog_reset,
+.TeaCatalog_tag {
+  border: 1px solid rgba(247, 243, 235, 0.14);
+  background: rgba(247, 243, 235, 0.04);
+  color: var(--color-paper);
+}
+
+.TeaCatalog_apply {
+  flex: 1;
+  border: 1px solid rgba(247, 243, 235, 0.92);
+  background: var(--color-paper);
+  color: #111513;
+}
+
+.TeaCatalog_tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.TeaCatalog_state {
+  margin-top: 26px;
+  padding: 28px;
+  border: 1px solid rgba(247, 243, 235, 0.08);
+  border-radius: 8px;
+  background: rgba(247, 243, 235, 0.03);
+  color: rgba(247, 243, 235, 0.66);
+  text-align: center;
+}
+
+.TeaCatalog_state--error {
+  color: rgba(255, 150, 150, 0.92);
+}
+
+.TeaCatalog_grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.TeaCatalog_card {
+  padding: 12px;
+  border: 1px solid rgba(247, 243, 235, 0.12);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(16, 20, 18, 0.98), rgba(9, 12, 11, 0.98));
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
+}
+
+.TeaCatalog_card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(190, 217, 181, 0.24);
+  box-shadow: 0 22px 38px rgba(0, 0, 0, 0.22);
+}
+
+.TeaCatalog_cardMedia {
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 1 / 1.04;
+  background: rgba(247, 243, 235, 0.04);
+}
+
+.TeaCatalog_cardMedia img,
+.TeaCatalog_cardPlaceholder {
+  width: 100%;
+  height: 100%;
+}
+
+.TeaCatalog_cardMedia img {
+  display: block;
+  object-fit: cover;
+}
+
+.TeaCatalog_cardPlaceholder {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at top, rgba(124, 155, 126, 0.28), transparent 40%),
+    linear-gradient(180deg, rgba(21, 27, 24, 0.98), rgba(10, 13, 11, 0.98));
+}
+
+.TeaCatalog_cardPlaceholder span {
+  color: rgba(247, 243, 235, 0.64);
+  font-family: var(--font-davinci);
+  font-size: clamp(48px, 6vw, 92px);
+  line-height: 1;
+}
+
+.TeaCatalog_cardBody {
+  display: grid;
+  gap: 10px;
+  padding: 16px 4px 4px;
+}
+
+.TeaCatalog_cardTopline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: rgba(247, 243, 235, 0.48);
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.TeaCatalog_cardTopline strong {
+  color: rgba(247, 243, 235, 0.86);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+.TeaCatalog_cardBody h3 {
+  margin: 0;
+  color: var(--color-paper);
+  font-family: var(--font-davinci);
+  font-size: clamp(28px, 2.4vw, 42px);
+  line-height: 0.95;
+  font-weight: 500;
+}
+
+.TeaCatalog_cardBody p {
+  margin: 0;
+  color: rgba(247, 243, 235, 0.68);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+@media (max-width: 1024px) {
+  .TeaCatalog_hero {
+    grid-template-columns: 1fr;
+  }
+
+  .TeaCatalog_toolbar {
+    top: 84px;
+    grid-template-columns: 1fr;
+  }
+
+  .TeaCatalog_controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .TeaCatalog_trigger {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .TeaCatalog_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .TeaCatalog {
+    padding: 24px 0 56px;
+  }
+
+  .TeaCatalog_hero {
+    padding: 20px;
+  }
+
+  .TeaCatalog_title {
+    max-width: none;
+    font-size: clamp(36px, 11vw, 54px);
+  }
+
+  .TeaCatalog_toolbar {
+    top: 72px;
+    padding: 12px;
+  }
+
+  .TeaCatalog_search input {
+    height: 46px;
+  }
+
+  .TeaCatalog_controls {
+    grid-template-columns: 1fr;
+  }
+
+  .TeaCatalog_menu {
+    left: 0;
+    right: 0;
+    width: auto;
+  }
+
+  .TeaCatalog_menu--filters {
+    width: auto;
+  }
+
+  .TeaCatalog_priceInputs {
+    grid-template-columns: 1fr;
+  }
+
+  .TeaCatalog_filterFooter {
+    flex-direction: column;
+  }
+
+  .TeaCatalog_apply,
+  .TeaCatalog_reset {
+    width: 100%;
+  }
+
+  .TeaCatalog_grid {
+    grid-template-columns: 1fr;
+  }
+}

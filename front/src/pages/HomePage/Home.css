@@ -1,0 +1,29 @@
+html {
+  overflow-x: hidden;
+}
+
+section {
+  background-color: transparent;
+}
+
+.First_block,
+.Second_block,
+.Third_block,
+.Home_footer_wrap {
+  background-color: var(--color-putty);
+}
+
+.Third_block {
+  position: relative;
+  padding-bottom: var(--spacing-96);
+}
+
+.Home_footer_wrap {
+  border-top: 1px solid var(--color-border-strong);
+}
+
+@media (min-width: 1025px) {
+  body {
+    max-width: 100%;
+  }
+}

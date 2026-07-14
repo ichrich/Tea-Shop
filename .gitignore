@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+front/node_modules/
+adminPanel/node_modules/
+server/node_modules/
+
+# Production builds
+dist/
+front/dist/
+adminPanel/dist/
+server/dist/
+
+# Local runtime files
+*.log
+*.err.log
+*.out.log
+*.pid
+
+# Environment files and secrets
+.env
+.env.local
+.env.*.local
+!.env.example
+!.env.*.example
+
+# Local application data
+server/data/*.ndjson
+*.sqlite
+*.sqlite3
+*.db
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Test and audit output
+coverage/
+playwright-report/
+test-results/
+audit/

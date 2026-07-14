@@ -1,0 +1,113 @@
+.ForWhom {
+  width: 100%;
+  padding: clamp(72px, 8vw, 132px) 0;
+  overflow: hidden;
+  background: var(--color-putty);
+  color: var(--color-paper);
+}
+
+.ForWhom_wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(16px, 1.6vw, 28px);
+  width: 100%;
+}
+
+.ForWhom_title {
+  grid-column: 1 / -1;
+  max-width: 14ch;
+  margin: 0 0 clamp(28px, 4vw, 56px);
+  font-family: var(--font-davinci);
+  font-size: clamp(3rem, 5vw, 6.8rem);
+  font-weight: 500;
+  line-height: 0.92;
+  letter-spacing: 0;
+  text-transform: none;
+  overflow-wrap: anywhere;
+}
+
+.ForWhom_card {
+  grid-column: span 4;
+  min-width: 0;
+  min-height: clamp(180px, 16vw, 280px);
+  display: grid;
+  align-items: end;
+  padding: clamp(20px, 2vw, 30px);
+  border: 1px solid rgba(247, 243, 235, 0.14);
+  border-radius: 8px;
+  background: linear-gradient(145deg, rgba(247, 243, 235, 0.055), rgba(247, 243, 235, 0.015));
+}
+
+.ForWhom_card:nth-of-type(2),
+.ForWhom_card:nth-of-type(4),
+.ForWhom_card:nth-of-type(6) {
+  transform: translateY(18px);
+}
+
+.ForWhom_card_question {
+  max-width: 24ch;
+  margin: 0;
+  color: var(--color-paper);
+  font-family: var(--font-helvetica-now);
+  font-size: clamp(18px, 1.5vw, 28px);
+  font-weight: 500;
+  line-height: 1.24;
+  letter-spacing: 0;
+  text-transform: none;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 1024px) {
+  .ForWhom_wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ForWhom_title,
+  .ForWhom_card {
+    grid-column: auto;
+  }
+
+  .ForWhom_title {
+    grid-column: 1 / -1;
+    max-width: 18ch;
+  }
+
+  .ForWhom_card,
+  .ForWhom_card:nth-of-type(2),
+  .ForWhom_card:nth-of-type(4),
+  .ForWhom_card:nth-of-type(6) {
+    min-height: 200px;
+    transform: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .ForWhom {
+    padding: 64px 0;
+  }
+
+  .ForWhom_wrapper {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ForWhom_title,
+  .ForWhom_card {
+    grid-column: auto;
+  }
+
+  .ForWhom_title {
+    margin-bottom: 20px;
+    font-size: clamp(2.5rem, 12vw, 3.8rem);
+  }
+
+  .ForWhom_card {
+    min-height: 150px;
+    padding: 22px;
+  }
+
+  .ForWhom_card_question {
+    max-width: none;
+    font-size: 19px;
+  }
+}

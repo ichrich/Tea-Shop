@@ -1,0 +1,160 @@
+
+.CategoryPieChart {
+    width: 22.6146vw; 
+    height: 21.1979vw; 
+    background-color: var(--clr-dark-bg);
+    border-radius: 1.0417vw; 
+    padding: 1.56vw;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.CategoryPieChart_header {
+    margin-bottom: 1.04vw;
+}
+
+.CategoryPieChart_title {
+    font-size: 0.94vw; 
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 110%;
+    color: var(--clr-white);
+    margin: 0;
+}
+
+.CategoryPieChart_content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.56vw;
+}
+
+.CategoryPieChart_chart {
+    width: 11.1458vw; 
+    height: 11.1458vw; 
+    position: relative;
+}
+
+.CategoryPieChart_svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(0deg);
+}
+
+.CategoryPieChart_legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.52vw;
+    width: 100%;
+
+}
+
+.CategoryPieChart_legend_item {
+    display: flex;
+    align-items: center;
+    gap: 0.52vw;
+}
+
+.CategoryPieChart_legend_dot {
+    width: 0.625vw; 
+    height: 0.625vw; 
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.CategoryPieChart_legend_dot.main {
+    background-color: #2600ff;
+}
+
+.CategoryPieChart_legend_dot.additional {
+    background-color: #82cbff;
+}
+
+.CategoryPieChart_legend_label {
+    font-size: 0.7292vw; 
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    line-height: 110%;
+    color: var(--clr-white);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .CategoryPieChart {
+        width: 100%;
+        height: 41vw;
+        border-radius: 2.08vw;
+        padding: 2.60vw;
+    }
+
+    .CategoryPieChart_header {
+        margin-bottom: 2.08vw;
+    }
+
+    .CategoryPieChart_title {
+        font-size: 2.4vw;
+    }
+
+    .CategoryPieChart_content {
+        gap: 2.60vw;
+    }
+
+    .CategoryPieChart_chart {
+        width: 22vw;
+        height: 22vw;
+    }
+
+    .CategoryPieChart_legend {
+        gap: 1.04vw;
+    }
+
+    .CategoryPieChart_legend_dot {
+        width: 1.56vw;
+        height: 1.56vw;
+    }
+
+    .CategoryPieChart_legend_label {
+        font-size: 1.85vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .CategoryPieChart {
+        width: 100%;
+        height: 79.22vw;
+        border-radius: 2.78vw;
+        padding: 4.17vw;
+    }
+
+    .CategoryPieChart_header {
+        margin-bottom: 2.78vw;
+    }
+
+    .CategoryPieChart_title {
+        font-size: 4.5vw;
+    }
+
+    .CategoryPieChart_content {
+        gap: 4.17vw;
+    }
+
+    .CategoryPieChart_chart {
+        width: 44.44vw;
+        height: 44.44vw;
+    }
+
+    .CategoryPieChart_legend {
+        gap: 2.22vw;
+    }
+
+    .CategoryPieChart_legend_dot {
+        width: 2.78vw;
+        height: 2.78vw;
+    }
+
+    .CategoryPieChart_legend_label {
+        font-size: 4vw;
+    }
+}

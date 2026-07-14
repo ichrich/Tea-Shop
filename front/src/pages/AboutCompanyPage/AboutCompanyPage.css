@@ -1,0 +1,35 @@
+@media (min-width: 1025px) {
+  .about-page {
+    scroll-padding-top: 55px;
+  }
+
+  .about-page .about__block,
+  .about-page .invitation,
+  .about-page .partners-gallery {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
+.about-page {
+  background: var(--color-putty);
+}
+
+.about-points-scene {
+  position: relative;
+  z-index: 0;
+  background: var(--surface-ink-room);
+}
+
+.about-points-scene .TeaStory_section {
+  position: relative;
+  z-index: 1;
+}
+
+.about-points-scene__story {
+  background-color: var(--surface-ink-room);
+}
+
+.about-page__footer {
+  background: var(--color-putty);
+}

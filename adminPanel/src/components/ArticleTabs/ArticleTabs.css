@@ -1,0 +1,232 @@
+
+
+
+.ArticleTabs {
+    display: flex;
+    gap: 0.78vw; 
+    margin-bottom: 1.04vw; 
+    flex-wrap: wrap;
+    border-bottom: 1px solid #616161;
+}
+
+.ArticleTabs_tab {
+    display: flex;
+    align-items: center;
+    gap: 0.16vw; 
+    padding: 0.52vw 0; 
+    background: transparent;
+    border: none;
+    border-bottom: 0.16vw solid transparent;
+    font-size: 0.938vw; 
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ArticleTabs_tab:hover {
+    color: #CDFFFF;
+}
+
+.ArticleTabs_tab_active {
+    color: #CDFFFF;
+    background-color: transparent;
+}
+
+.ArticleTabs_badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.56vw; 
+    height: 0.94vw; 
+    padding: 0 0.31vw; 
+    border-radius: 0.52vw; 
+    font-size: 0.729vw; 
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.ArticleTabs_tab_active .ArticleTabs_badge {
+    color: #CDFFFF;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .ArticleTabs {
+        display: flex;
+        gap: 2.2vw; 
+        margin-bottom: 2.75vw; 
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding-bottom: 0.55vw;
+    }
+
+    .ArticleTabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .ArticleTabs_tab {
+        display: flex;
+        align-items: center;
+        gap: 0.82vw; 
+        padding: 1.37vw 0; 
+        background: transparent;
+        border: none;
+        border-bottom: 0.27vw solid transparent;
+        font-size: 1.92vw; 
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        flex-shrink: 0;
+        letter-spacing: -0.03em;
+        line-height: 110%;
+    }
+
+    .ArticleTabs_tab:hover {
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .ArticleTabs_tab_active {
+        color: var(--clr-white);
+        border-bottom-color: rgba(205, 255, 255, 1);
+    }
+
+    .ArticleTabs_badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 4.12vw; 
+        height: 2.47vw; 
+        padding: 0 1.1vw; 
+        background-color: rgba(64, 64, 64, 1);
+        border-radius: 1.37vw; 
+        font-size: 1.65vw; 
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.6);
+        letter-spacing: -0.03em;
+    }
+
+    .ArticleTabs_tab_active .ArticleTabs_badge {
+        background-color: rgba(205, 255, 255, 1);
+        color: rgba(0, 0, 0, 1);
+    }
+
+    .ArticleTabs_tab:focus {
+        outline: none;
+    }
+
+    .ArticleTabs::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 5.49vw;
+        background: linear-gradient(to right, transparent, rgba(30, 13, 13, 0.8));
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .ArticleTabs[data-has-scroll="true"]::after {
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .ArticleTabs {
+        display: flex;
+        gap: 2.5vw; 
+        margin-bottom: 5vw; 
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding-bottom: 1.25vw;
+        position: relative;
+    }
+
+    .ArticleTabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .ArticleTabs_tab {
+        display: flex;
+        align-items: center;
+        gap: 0.94vw; 
+        padding: 2.5vw 0; 
+        background: transparent;
+        border: none;
+        border-bottom: 0.625vw solid transparent; 
+        font-size: 4.375vw; 
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        flex-shrink: 0;
+        letter-spacing: -0.03em;
+        line-height: 110%;
+    }
+
+    .ArticleTabs_tab:hover {
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .ArticleTabs_tab_active {
+        color: var(--clr-white);
+        border-bottom-color: rgba(205, 255, 255, 1);
+    }
+
+    .ArticleTabs_badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 8.75vw; 
+        height: 3.438vw; 
+        padding: 0 1.563vw; 
+        background-color: rgba(99, 99, 99, 1);
+        border-radius: 31.25vw; 
+        font-size: 3.125vw; 
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+        letter-spacing: -0.03em;
+        line-height: 110%;
+    }
+
+    .ArticleTabs_tab_active .ArticleTabs_badge {
+        background-color: rgba(205, 255, 255, 1);
+        color: rgba(0, 0, 0, 1);
+    }
+
+    .ArticleTabs_tab:focus {
+        outline: none;
+    }
+
+    .ArticleTabs::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 12.5vw;
+        background: linear-gradient(to right, transparent, rgba(30, 13, 13, 0.9));
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+    }
+
+    .ArticleTabs[data-has-scroll="true"]::after {
+        opacity: 1;
+    }
+}

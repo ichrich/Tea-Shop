@@ -1,0 +1,70 @@
+.Layout {
+  min-height: 100vh;
+  position: relative;
+  background:
+    radial-gradient(circle at top right, rgba(255, 167, 84, 0.08), transparent 30%),
+    linear-gradient(180deg, #07090c 0%, #0d1013 100%);
+}
+
+.Layout_bgText {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 9.5vw;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.Layout_bgTextInner {
+  position: absolute;
+  left: 3.5vw;
+  bottom: -3.2vw;
+  font-size: 12.85vw;
+  line-height: 0.86;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.04);
+  white-space: nowrap;
+}
+
+.Layout {
+  --Layout_bgTextHeight: 9.5vw;
+}
+
+.Layout_container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.Layout_main {
+  width: min(1480px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 24px 0 calc(48px + var(--Layout_bgTextHeight));
+  min-height: calc(100vh - 72px);
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .Layout {
+    --Layout_bgTextHeight: 18vw;
+  }
+
+  .Layout_bgText {
+    height: var(--Layout_bgTextHeight);
+  }
+
+  .Layout_bgTextInner {
+    left: 20px;
+    bottom: -10px;
+    font-size: 14vw;
+  }
+
+  .Layout_main {
+    width: calc(100% - 32px);
+    padding: 18px 0 calc(18px + (var(--Layout_bgTextHeight) * 0.4));
+  }
+}

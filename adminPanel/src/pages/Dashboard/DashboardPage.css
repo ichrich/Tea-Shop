@@ -1,0 +1,317 @@
+.DashboardNew {
+  display: grid;
+  gap: 20px;
+}
+
+.DashboardNew_topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: end;
+}
+
+.DashboardNew_kicker,
+.DashboardNew_cardLabel {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: rgba(245, 239, 228, 0.48);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.DashboardNew_title {
+  margin: 0;
+  max-width: 640px;
+  color: #f5efe4;
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 0.96;
+  font-weight: 500;
+}
+
+.DashboardNew_selectWrap {
+  min-width: 240px;
+  display: grid;
+  gap: 8px;
+}
+
+.DashboardNew_selectWrap label {
+  color: rgba(245, 239, 228, 0.52);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.DashboardNew_selectWrap select,
+.DashboardNew_head select {
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(12, 14, 17, 0.86);
+  color: #f5efe4;
+}
+
+.DashboardNew_summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.DashboardNew_statCard,
+.DashboardNew_card {
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  background: rgba(12, 14, 17, 0.86);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+.DashboardNew_statCard {
+  display: grid;
+  gap: 8px;
+}
+
+.DashboardNew_statCard span,
+.DashboardNew_statCard small {
+  color: rgba(245, 239, 228, 0.52);
+  font-size: 12px;
+}
+
+.DashboardNew_statCard strong {
+  color: #f5efe4;
+  font-size: clamp(24px, 2.2vw, 34px);
+  line-height: 1;
+  font-weight: 500;
+}
+
+.DashboardNew_grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(360px, 0.8fr);
+  gap: 16px;
+}
+
+.DashboardNew_side {
+  display: grid;
+  gap: 16px;
+}
+
+.DashboardNew_head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.DashboardNew_head h3 {
+  margin: 0;
+  color: #f5efe4;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.DashboardNew_plotWrap {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 10px;
+  min-height: 420px;
+}
+
+.DashboardNew_yAxis {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  align-items: center;
+  color: rgba(245, 239, 228, 0.42);
+  font-size: 11px;
+}
+
+.DashboardNew_yAxis span {
+  text-align: right;
+}
+
+.DashboardNew_plot {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 16px;
+  border-radius: 10px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.01));
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.DashboardNew_plot svg {
+  width: 100%;
+  height: 100%;
+}
+
+.gridLine {
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 0.2;
+}
+
+.lineViews {
+  stroke: #f4efe6;
+  stroke-width: 0.6;
+}
+
+.lineOrders {
+  stroke: #ff9a4d;
+  stroke-width: 0.6;
+}
+
+.dotViews {
+  fill: #f4efe6;
+}
+
+.dotOrders {
+  fill: #ff9a4d;
+}
+
+.DashboardNew_months {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin-top: 10px;
+  color: rgba(245, 239, 228, 0.46);
+  font-size: 11px;
+}
+
+.DashboardNew_months span {
+  text-align: center;
+}
+
+.DashboardNew_salesContent {
+  display: grid;
+  gap: 20px;
+}
+
+.DashboardNew_statsList {
+  display: grid;
+  gap: 12px;
+}
+
+.DashboardNew_statsList div {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 12px;
+}
+
+.DashboardNew_statsList span {
+  color: rgba(245, 239, 228, 0.48);
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.DashboardNew_statsList b {
+  color: #f5efe4;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.DashboardNew_donutWrap {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.DashboardNew_donut {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.DashboardNew_donut::after {
+  content: '';
+  position: absolute;
+  inset: 18px;
+  border-radius: 50%;
+  background: #0f1317;
+}
+
+.DashboardNew_legend {
+  display: grid;
+  gap: 10px;
+  color: rgba(245, 239, 228, 0.68);
+  font-size: 12px;
+}
+
+.DashboardNew_legend i {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  margin-right: 8px;
+  border-radius: 999px;
+}
+
+.legendA {
+  background: #ff9a4d;
+}
+
+.legendB {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.DashboardNew_insights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.DashboardNew_insights article {
+  min-height: 160px;
+  display: grid;
+  align-content: space-between;
+  gap: 10px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.DashboardNew_insights span,
+.DashboardNew_insights p {
+  color: rgba(245, 239, 228, 0.48);
+}
+
+.DashboardNew_insights strong {
+  color: #f5efe4;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.DashboardNew_loading {
+  color: rgba(245, 239, 228, 0.58);
+  font-size: 13px;
+}
+
+@media (max-width: 1024px) {
+  .DashboardNew_topline,
+  .DashboardNew_grid {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .DashboardNew_summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .DashboardNew_summary,
+  .DashboardNew_insights {
+    grid-template-columns: 1fr;
+  }
+
+  .DashboardNew_plotWrap {
+    grid-template-columns: 26px 1fr;
+    min-height: 320px;
+  }
+
+  .DashboardNew_donutWrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

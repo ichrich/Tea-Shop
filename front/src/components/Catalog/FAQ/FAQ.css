@@ -1,0 +1,243 @@
+.faq {
+    width: 100%;
+    padding: 5.21vw 0;
+    background: var(--clr-bg);
+    border-radius: 0 0 40px 40px;
+    overflow: hidden;
+}
+
+
+
+.faq__top {
+    margin-bottom: 2.5vw;
+}
+
+.faq__title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 2.6vw;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0;
+    width: 35vw;
+}
+
+
+
+.faq__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2vw;
+}
+
+
+
+.faq-card {
+    height: 18vw;
+    perspective: 1000px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    text-align: inherit;
+}
+
+.faq-card:focus-visible {
+    outline: 2px solid var(--color-paper);
+    outline-offset: 4px;
+}
+
+
+
+.faq-card--wide {
+    grid-column: span 2;
+}
+
+
+
+.faq-card__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.faq-card:hover .faq-card__inner,
+.faq-card.is-open .faq-card__inner {
+    transform: rotateY(180deg);
+}
+
+
+
+.faq-card__front,
+.faq-card__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    border: 1px solid #999999;
+
+    background: linear-gradient(
+        100deg,
+        rgba(255, 255, 255, 0.10) 3.64%,
+        rgba(153, 153, 153, 0.10) 86.15%
+    );
+
+    border-radius: 1.1vw;
+
+    backdrop-filter: blur(10px);
+
+    padding: 1.56vw;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    backface-visibility: hidden;
+}
+
+.faq-card__back {
+    transform: rotateY(180deg);
+}
+
+
+
+.faq-card__question {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.65vw;
+    text-transform: uppercase;
+    line-height: 130%;
+    color: #ffffff;
+    margin: 0;
+    text-align: center;
+}
+
+.faq-card__answer {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.9vw;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0;
+    text-align: center;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .faq {
+        border-radius: 0 0 30px 30px;
+        padding: 10.42vw 0;
+    }
+    
+    .faq__grid
+    {
+        gap: 2.6vw;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .faq__wrapper {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        gap: 2.6vw;
+        min-height: auto;
+    }
+
+    .faq__title {
+        position: static;
+        transform: none;
+        font-size: 4.3vw;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 2.6vw;
+    }
+
+    .faq__top
+    {
+        margin-bottom: 5.2vw;
+    }
+
+    .faq-card {
+        position: static;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 25vw;
+        gap: 1.3vw;
+        border-radius: 2.67vw;
+    }
+
+    .faq-card__question {
+        font-size: 3.15vw;
+        line-height: 110%;
+    }
+
+    .faq-card--wide .faq-card__question
+    {
+        width: 70%;
+    }
+
+    .faq-card__answer {
+        font-size: 1.82vw;
+        line-height: 130%;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .faq {
+        border-radius: 0 0 20px 20px;
+        padding: 13.89vw 0;
+    }
+
+    .faq__grid
+    {
+        grid-template-columns: 1fr;
+        gap: 5.15vw;
+    }
+
+    .faq__wrapper {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        gap: 2.78vw;
+        min-height: auto;
+    }
+
+    .faq__title {
+        position: static;
+        transform: none;
+        font-size: 7vw;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 5.56vw;
+    }
+
+    .faq-card {
+        position: static;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 50vw;
+        gap: 2.78vw;
+        border-radius: 5.78vw;
+    }
+    .faq-card--wide
+    {
+        grid-column: span 1;
+    }
+
+    .faq-card__question {
+        font-size: 5.6vw;
+        line-height: 130%;
+    }
+
+    .faq-card__answer {
+        font-size: 3.89vw;
+        line-height: 150%;
+    }
+}

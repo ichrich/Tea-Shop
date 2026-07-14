@@ -1,0 +1,143 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --clr-bg: #0b0d0f;
+  --clr-dark-bg: #101417;
+  --clr-dark-brown: #151a1f;
+  --clr-white: #f7f3eb;
+  --clr-text-secondary: rgba(247, 243, 235, 0.52);
+  --clr-blue: #b88a4a;
+  --clr-light-blue: rgba(184, 138, 74, 0.14);
+  --clr-green: #7f9f77;
+  --clr-red: #b86161;
+
+  --grid-container-padding: 32px;
+  --grid-columns-desktop: 12;
+  --grid-column-gap: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: var(--clr-bg);
+  color: var(--clr-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: inherit;
+  outline: none;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+.Header {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.Layout_container {
+  max-width: 1720px !important;
+}
+
+.Sidebar {
+  width: 270px
+}
+.container {
+  width: 100%;
+  max-width: 1720px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: var(--grid-column-gap);
+  row-gap: 2.08vw;
+}
+
+.col-1  { grid-column: span 1; }
+.col-2  { grid-column: span 2; }
+.col-3  { grid-column: span 3; }
+.col-4  { grid-column: span 4; }
+.col-5  { grid-column: span 5; }
+.col-6  { grid-column: span 6; }
+.col-7  { grid-column: span 7; }
+.col-8  { grid-column: span 8; }
+.col-9  { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  :root {
+    --grid-container-padding: 24px;
+    --grid-column-gap: 18px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  section {
+    width: 100%;
+    padding: 0 2.60vw;
+  }
+
+  .grid {
+    grid-template-columns: repeat(8, 1fr);
+    row-gap: 2.60vw;
+  }
+  .Sidebar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --grid-container-padding: 16px;
+    --grid-column-gap: 14px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  section {
+    width: 100%;
+    padding: 0 4.17vw;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 4.17vw;
+  }
+}
