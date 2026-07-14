@@ -177,4 +177,6 @@ npm run build
 - Панель управления: `/admin/`;
 - API: `/api`.
 
+Если в настройках Web Service поле Root Directory содержит `server`, используйте Build Command `npm run render-build` и Start Command `npm start`. Если Root Directory пустое, используйте команды из `render.yaml`.
+
 Без внешней MySQL сайт запускается с локальным контентом, а функции админки, требующие базу, недоступны. Для подключения базы необходимо установить `DATABASE_ENABLED=true` и добавить переменные `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`. Для MySQL с обязательным TLS также задается `DB_SSL=true`.

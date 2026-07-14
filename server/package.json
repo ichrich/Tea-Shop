@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
+    "render-build": "npm ci && npm ci --prefix ../front && npm run build --prefix ../front && npm ci --prefix ../adminPanel && npm run build --prefix ../adminPanel",
     "create-admin": "node scripts/create-admin.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

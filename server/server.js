@@ -68,7 +68,10 @@ app.use((req, res, next) => {
   const frontIndex = path.join(FRONT_DIST, 'index.html');
   if (fs.existsSync(frontIndex)) return res.sendFile(frontIndex);
 
-  return res.status(200).json({ status: 'ok', message: 'API работает' });
+  return res.status(503).json({
+    status: 'build_required',
+    message: 'Frontend build was not found. Run the Render build command before starting the service.',
+  });
 });
 
 app.use((error, req, res, next) => {
