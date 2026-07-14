@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+.npm-cache/
 front/node_modules/
 adminPanel/node_modules/
 server/node_modules/

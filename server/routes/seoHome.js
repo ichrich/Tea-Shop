@@ -40,15 +40,6 @@ module.exports = (query) => {
       await query(`ALTER TABLE seo_home_blocks ADD COLUMN text_left LONGTEXT NULL`);
     }
   };
-  Promise.resolve()
-    .then(() => ensureTable())
-    .then(() => ensurePageTitleColumn())
-    .then(() => ensureFormatColumn())
-    .then(() => ensureTextLeftColumn())
-    .catch((err) => {
-    console.error('[seoHome] Failed to ensure seo_home_blocks table:', err?.message || err);
-  });
-
   r.get(
     '/:pageKey',
     endpoint(async (req) => {
@@ -81,4 +72,3 @@ module.exports = (query) => {
 
   return r;
 };
-

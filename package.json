@@ -1,0 +1,12 @@
+{
+  "name": "sad-tishiny-platform",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "render-build": "npm ci --prefix server && npm ci --prefix front && npm run build --prefix front && npm ci --prefix adminPanel && npm run build --prefix adminPanel",
+    "start": "npm start --prefix server"
+  }
+}

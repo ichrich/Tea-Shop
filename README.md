@@ -165,3 +165,16 @@ npm run build
 ```
 
 Настройки почты находятся в `server/.env.forms.example`. Перед публикацией необходимо задать собственный `JWT_SECRET` и параметры SMTP.
+
+## Развертывание на Render
+
+В репозитории находится `render.yaml`. Он создает один Web Service, который раздает сайт, панель управления и API.
+
+- Build Command: `npm run render-build`;
+- Start Command: `npm start`;
+- Health Check Path: `/healthz`;
+- Сайт: `/`;
+- Панель управления: `/admin/`;
+- API: `/api`.
+
+Без внешней MySQL сайт запускается с локальным контентом, а функции админки, требующие базу, недоступны. Для подключения базы необходимо установить `DATABASE_ENABLED=true` и добавить переменные `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, `DB_NAME`. Для MySQL с обязательным TLS также задается `DB_SSL=true`.
